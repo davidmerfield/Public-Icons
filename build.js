@@ -28,6 +28,8 @@ function compile () {
   createIconPages(metadata);
   createHomepage(metadata);
 
+  makeStaticPages('license');
+  
   console.log('Built site...');
 }
 
@@ -58,6 +60,20 @@ function createIconPages (metadata) {
 
   }
 }
+
+function makeStaticPages() {
+
+  for (var i in arguments) {
+
+    fileName = arguments[i];
+
+    fs.mkdirSync(distDir + fileName);
+
+    fs.writeFileSync(distDir + fileName + '/index.html', fs.readFileSync(sourceDir + fileName + '.html'));    
+  }
+
+}
+
 
 function createHomepage(metadata) {
 
