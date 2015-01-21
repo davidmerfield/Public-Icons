@@ -1,0 +1,38 @@
+{
+  "check.svg": {
+    "created": "2015",
+    "tags": ["tick", "checkmark"],
+    "title": "Check"
+  },
+  "bang.svg": {
+    "created": "2015",
+    "tags": ["exclamation", "point"],
+    "title": "Bang"
+  },
+  "plus.svg": {
+    "created": "2015",
+    "tags": ["add", "addition", "maths"],
+    "title": "Plus"
+  },
+  "right_arrow.svg": {
+    "created": "2015",
+    "tags": ["arrow"],
+    "title": "Right Arrow"
+  },
+  "up_arrow.svg": {
+    "created": "2015",
+    "tags": ["arrow"],
+    "title": "Up Arrow"
+  },
+  "down_arrow.svg": {
+    "created": "2015",
+    "tags": ["arrow"],
+    "title": "Down Arrow"
+  },
+  "left_arrow.svg": {
+    "created": "2015",
+    "tags": ["arrow"],    
+    "title": "Left Arrow"
+  }  
+
+}

@@ -1,0 +1,29 @@
+{
+  "name": "PublicIcons",
+  "description": "A collection of icons in the public domain",
+  "version": "0.0.0",
+  "dependencies": {
+    "cheerio": "^0.17.0",
+    "chokidar": "^0.12.6",
+    "clean-css": "^2.2.14",
+    "rimraf": "^2.2.8",
+    "uglify-js": "^2.4.16"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/davidmerfield/randomColor.git"
+  },
+  "keywords": [
+    "public",
+    "domain",
+    "icons",
+    "free"
+  ],
+  "author": "David Merfield",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/davidmerfield/PublicIcons/issues"
+  },
+  "homepage": "http://publicicons.org"
+}
