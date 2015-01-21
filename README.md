@@ -1,6 +1,6 @@
 # Public Icons
 
-A collection of icons in the public domain. See all the icons 
+A collection of icons in the public domain. See all the icons at [the project's website](http://publicicons.org).
 
 ### License
 
