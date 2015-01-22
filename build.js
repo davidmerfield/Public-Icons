@@ -10,7 +10,7 @@ var sourceDir = __dirname + '/source/',
 
 var chokidar = require('chokidar'), 
     watcher = chokidar.watch(sourceDir, {ignored: /^\./, persistent: true});
-    watcher.add(iconDir + '_metadata.json');
+    watcher.add(iconDir);
     watcher.on('change', function(path) {compile();});
 
 compile();
@@ -101,7 +101,7 @@ function createHomepage(metadata) {
         title = iconData.title,
         slug = makeSlug(title, fileName);
 
-    var newLink = '<a href="/icon/' + slug +'" class="icon '+slug+'" data-index="' + (++index) + '" data-tags="' + tags + '" title="' + title + '"></a>'
+    var newLink = '<a href="/icon/' + slug +'" class="icon '+slug+'" data-index="' + (++index) + '" data-tags="' + tags + '" title="' + title + '"><span>'+title+'</span></a>'
     
     $('#allIcons').append(newLink);
   }
