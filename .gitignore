@@ -5,6 +5,8 @@
 /public/*
 /node_modules/*
 
+config.json
+
 .DS_Store
 .DS_Store?
 ._*
