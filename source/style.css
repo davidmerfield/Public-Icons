@@ -42,10 +42,11 @@ h1 {font-size: 1.5em;line-height: 1.33em;float:left;}
 h1 span {font-weight: normal;font-size: 0.88em;color: #666;margin-left: 2em;}
 h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
 
-.icon {background: url('') no-repeat center center;background-size:100%;width: 6em;height: 6em;margin: 0 1em 0 0;display: inline-block;}
+.icon {background: url('') no-repeat center center;background-size:4.5em;width: 6em;height: 6em;margin: 0 2em 1em 0;display: inline-block;}
 
 .iconContainer .icon {width: 20em;height: 20em;}
 
+.icon span {text-align: center;position: absolute;bottom: -2.33em;left:0;right: 0;font-size: 0.66em;text-transform: uppercase;color: #aaa;letter-spacing: 0.1em}
 input {
   background: url('./search.svg') no-repeat 10px center;
   background-size: 1em;
