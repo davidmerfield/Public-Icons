@@ -27,7 +27,7 @@ header, footer {
   padding: 2em 4em 0;
 }
 
-section {padding: 2em 3em 0}
+section {padding: 2em 4em 0}
 
 nav {float: right;}
 
@@ -51,6 +51,7 @@ p {max-width: 30em;}
 
 h1, h2, h3, h4, h5 {
   font-weight: bold;
+  color: #000
 }
 h1 {font-size: 1.5em;line-height: 1.33em;float:left;}
 h1 span {font-weight: normal;font-size: 0.88em;color: #666;margin-left: 2em;}
@@ -58,8 +59,9 @@ h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
 
 .icon {width: 4.5em;height: 4.5em;margin: 0.5em 1.5em;display: inline-block;}
 
+.iconContainer {display: block;margin-top:2em;width: 100%;text-align: center;}
 .iconContainer .icon {width: 20em;height: 20em;}
-
+.iconContainer h1 {font-size: 4em;float: none;width: 100%;margin-top: 0.5em}
 #allIcons {text-align: justify;}
 
 #allIcons a {
@@ -67,6 +69,20 @@ h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
   margin-bottom: 3em;
   display: inline-block;
 }
+
+.button {
+display: inline-block;
+margin: 3em 0;
+text-decoration: none;
+color: #000;
+border-radius: 4em;
+border:2px solid #000;
+font-weight: bold;
+font-size: 1.1566em;
+padding: 0.75em 2em 0.7em;
+}
+
+.button.primary {background: #f9951d;}
 
 .icon + .label {text-align: center;position: absolute;bottom: -2em;left:0;right: 0;font-size: 0.66em;text-transform: uppercase;color: #aaa;letter-spacing: 0.1em}
 

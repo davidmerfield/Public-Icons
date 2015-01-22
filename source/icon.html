@@ -2,13 +2,11 @@
   {{> head}}
   <body>
     {{> header}}
-    <section>
-      <a href="/">&larr; Back to homepage</a>
-    </section>  
     <section class="iconContainer">
+      <span class="icon">{{{svgString}}}</span>
+        <Br />
         <h1>{{title}}</h1>
-        <a href="{{location}}" download>Download this icon</a><br />
-        <span class="icon">{{{svgString}}}</span>
+        <a class="button primary" href="./{{fileName}}" download>Download this icon</a><br />
     </section>
     {{> footer}}
   </body>

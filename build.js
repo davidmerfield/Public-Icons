@@ -59,6 +59,7 @@ function extractIcons (metadata) {
       index: ++index,
       slug: makeSlug(iconData.title, fileName),
       svg: svg,
+      fileName: fileName,
       svgString: manipSVG(svg)
     });
   }
@@ -80,13 +81,13 @@ function manipSVG (svgString) {
 
 function createIconPages (template, partials, icons) {
       
-
   fs.mkdirSync(distDir + '/icon');
 
   for (var i in icons) {
 
     var icon = icons[i],
         slug = icon.slug,
+
         pagePath = distDir + '/icon/' + slug + '/';
 
     fs.mkdirSync(distDir + '/icon/' + slug);
@@ -94,7 +95,7 @@ function createIconPages (template, partials, icons) {
     var renderedTemplate = Mustache.render(template, icon, partials);
 
     fs.writeFileSync(pagePath + 'index.html', renderedTemplate);
-    fs.writeFileSync(pagePath + fileName, icon.svg);
+    fs.writeFileSync(pagePath + icon.fileName, icon.svg);
   }
 }
 
