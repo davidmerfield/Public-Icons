@@ -1,6 +1,7 @@
 var fs = require('fs'),
     CleanCSS = require('clean-css'),
     UglifyJS = require("uglify-js"),
+    Mustache = require('mustache'),
     cheerio = require('cheerio');
 
 var sourceDir = __dirname + '/source/',
@@ -12,6 +13,12 @@ var chokidar = require('chokidar'),
     watcher.add(iconDir);
     watcher.on('change', function(path) {compile();});
 
+var partials = {
+      header: fs.readFileSync(sourceDir + 'header.html', 'utf8'),
+      head: fs.readFileSync(sourceDir + 'head.html', 'utf8'),
+      footer: fs.readFileSync(sourceDir + 'footer.html', 'utf8')
+    };
+
 compile();
 
 function compile () {
@@ -22,54 +29,79 @@ function compile () {
   compressCSS('style.css');
   compressJS('lib/lunr.js','lib/mustache.js', 'app.js');
 
-  var metadata = JSON.parse(fs.readFileSync(iconDir + '_metadata.json', 'utf8'));
-  
-  createIconPages(metadata);
-  createHomepage(metadata);
+  var metadata = JSON.parse(fs.readFileSync(iconDir + '_metadata.json', 'utf8')),
+      icons = extractIcons(metadata);
+
+  createIconPages(icons);
+  createHomepage(icons);
 
   makeStaticPages('license');
 
   console.log('Built site...');
 }
 
-function createIconPages (metadata) {
-      
-  fs.mkdirSync(distDir + '/icon');
+function extractIcons (metadata) {
 
-  var iconCSS = '';
+  var icons = [],
+      index = 0;
 
   for (var fileName in metadata) {
 
     var iconData = metadata[fileName],
-        title = iconData.title,
-        slug = makeSlug(title, fileName);
+        svg = fs.readFileSync(iconDir + fileName, 'utf8');
+    
+    icons.push({
+      title: iconData.title,
+      tags: iconData.tags,
+      index: ++index,
+      slug: makeSlug(iconData.title, fileName),
+      svg: svg,
+      svgString: manipSVG(svg)
+    });
+  }
+
+  return icons
+}
+
+function manipSVG (svgString) {
+
+  var $ = cheerio.load(svgString);
+
+  $('svg')
+    .removeAttr('width')
+    .removeAttr('height');  
+
+  // this gets the outerhtml of the svg el
+  return $.xml($('svg'));
+}
+
+function createIconPages (icons) {
+      
+  var iconTemplate = fs.readFileSync(sourceDir + '/icon.html', 'utf8');
+
+  fs.mkdirSync(distDir + '/icon');
+
+  for (var i in icons) {
+
+    var icon = icons[i],
+        slug = icon.slug;
 
     fs.mkdirSync(distDir + '/icon/' + slug);
 
-    var iconTemplate = fs.readFileSync(sourceDir + '/icon.html'),
-        $icon = cheerio.load(iconTemplate);
+    var renderedTemplate = Mustache.render(iconTemplate, icon, partials);
 
-    $icon('.iconContainer h1').text(title);
-    $icon('.iconContainer a').attr('href', '/icon/'+slug+'/' + fileName);
-    $icon('.icon').addClass('iconBG').addClass(slug);
-    
-    iconTemplate = $icon.html()
-
-    var svg = fs.readFileSync(iconDir + fileName, 'utf8');
-    var foo = svg.slice(svg.indexOf('<svg '));
-    var basesixtyfoursvg = new Buffer(foo).toString('base64');
-    var newline = ".icon." + slug + " {background-image: url('data:image/svg+xml;base64," + basesixtyfoursvg + "');}";
-
-    iconCSS += newline;
-
-    fs.writeFileSync(distDir + '/icon/' + slug + '/index.html', iconTemplate);
-
-    fs.writeFileSync(distDir + '/icon/' + slug + '/' + fileName, fs.readFileSync(iconDir + fileName));
-
+    fs.writeFileSync(distDir + '/icon/' + slug + '/index.html', renderedTemplate);
+    fs.writeFileSync(distDir + '/icon/' + slug + '/' + fileName, icon.svg);
   }
+}
 
-  fs.writeFileSync(distDir + '/icons.css', iconCSS);
+function createHomepage (icons) {
 
+  var homepageTemplate = fs.readFileSync(sourceDir + '/index.html', 'utf8');
+
+  var renderedHomepage = Mustache.render(homepageTemplate, {icons: icons}, partials);
+
+  fs.writeFileSync(distDir + '/index.html', renderedHomepage);
 
 }
 
@@ -83,31 +115,6 @@ function makeStaticPages() {
 
     fs.writeFileSync(distDir + fileName + '/index.html', fs.readFileSync(sourceDir + fileName + '.html'));    
   }
-
-}
-
-
-function createHomepage(metadata) {
-
-  var homepage = fs.readFileSync(sourceDir + '/index.html', 'utf8'),
-      $ = cheerio.load(homepage),
-      index = 0;
-
-  for (var fileName in metadata) {
-
-    var iconData = metadata[fileName],
-        tags = iconData.tags.join(', '),
-        title = iconData.title,
-        slug = makeSlug(title, fileName);
-
-    var newLink = '<a href="/icon/' + slug +'" class="icon '+slug+'" data-index="' + (++index) + '" data-tags="' + tags + '" title="' + title + '"><span>'+title+'</span></a>'
-    
-    $('#allIcons').append(newLink);
-  }
-
-  homepage = $.html();
-
-  fs.writeFileSync(distDir + '/index.html',homepage);
 
 }
 
