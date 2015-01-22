@@ -13,12 +13,6 @@ var chokidar = require('chokidar'),
     watcher.add(iconDir);
     watcher.on('change', function(path) {compile();});
 
-var partials = {
-      header: fs.readFileSync(sourceDir + 'header.html', 'utf8'),
-      head: fs.readFileSync(sourceDir + 'head.html', 'utf8'),
-      footer: fs.readFileSync(sourceDir + 'footer.html', 'utf8')
-    };
-
 compile();
 
 function compile () {
@@ -32,8 +26,17 @@ function compile () {
   var metadata = JSON.parse(fs.readFileSync(iconDir + '_metadata.json', 'utf8')),
       icons = extractIcons(metadata);
 
-  createIconPages(icons);
-  createHomepage(icons);
+  var iconTemplate = fs.readFileSync(sourceDir + '/icon.html', 'utf8'),
+      homepageTemplate = fs.readFileSync(sourceDir + '/index.html', 'utf8'),
+
+      partials = {
+        header: fs.readFileSync(sourceDir + 'header.html', 'utf8'),
+        head: fs.readFileSync(sourceDir + 'head.html', 'utf8'),
+        footer: fs.readFileSync(sourceDir + 'footer.html', 'utf8')
+      };
+
+  createIconPages(iconTemplate, partials, icons);
+  createHomepage(homepageTemplate, partials, icons);
 
   makeStaticPages('license');
 
@@ -75,34 +78,35 @@ function manipSVG (svgString) {
   return $.xml($('svg'));
 }
 
-function createIconPages (icons) {
+function createIconPages (template, partials, icons) {
       
-  var iconTemplate = fs.readFileSync(sourceDir + '/icon.html', 'utf8');
 
   fs.mkdirSync(distDir + '/icon');
 
   for (var i in icons) {
 
     var icon = icons[i],
-        slug = icon.slug;
+        slug = icon.slug,
+        pagePath = distDir + '/icon/' + slug + '/';
 
     fs.mkdirSync(distDir + '/icon/' + slug);
 
-    var renderedTemplate = Mustache.render(iconTemplate, icon, partials);
+    var renderedTemplate = Mustache.render(template, icon, partials);
 
-    fs.writeFileSync(distDir + '/icon/' + slug + '/index.html', renderedTemplate);
-    fs.writeFileSync(distDir + '/icon/' + slug + '/' + fileName, icon.svg);
+    fs.writeFileSync(pagePath + 'index.html', renderedTemplate);
+    fs.writeFileSync(pagePath + fileName, icon.svg);
   }
 }
 
-function createHomepage (icons) {
+function createHomepage (template, partials, icons) {
 
-  var homepageTemplate = fs.readFileSync(sourceDir + '/index.html', 'utf8');
+  var html = Mustache.render(
+        template,
+        {icons: icons},
+        partials
+      );
 
-  var renderedHomepage = Mustache.render(homepageTemplate, {icons: icons}, partials);
-
-  fs.writeFileSync(distDir + '/index.html', renderedHomepage);
-
+  fs.writeFileSync(distDir + '/index.html', html);
 }
 
 function makeStaticPages() {
