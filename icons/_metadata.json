@@ -27,10 +27,34 @@
     "title": "Left Arrow",
     "tags": ["arrow", "left", "direction"] 
   },  
+  "resize.svg": {
+    "title": "Resize",
+    "tags": ["resize"] 
+  },  
+  "note.svg": {
+    "title": "Note",
+    "tags": ["music", "note"]
+  },
+  "cloud.svg": {
+    "title": "Cloud",
+    "tags": ["cloud"]
+  },
+  "star.svg": {
+    "title": "Star",
+    "tags": ["star"]
+  },
+  "home.svg": {
+    "title": "Home",
+    "tags": ["home", "house"]
+  },
   "heart.svg": {
     "title": "Heart",
     "tags": ["heart", "love", "❤", "<3", "like", "save"]
   },
+  "reload.svg": {
+    "title": "Reload",
+    "tags": ["reload", "refresh"]
+  },  
   "search.svg": {
     "title": "Search",
     "tags": ["search", "find", "magnify", "magnifying "]

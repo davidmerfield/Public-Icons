@@ -62,7 +62,6 @@ h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
 .iconContainer {display: block;margin-top:2em;width: 100%;text-align: center;}
 .iconContainer .icon {width: 20em;height: 20em;}
 .iconContainer h1 {font-size: 4em;float: none;width: 100%;margin-top: 0.5em}
-#allIcons {text-align: justify;}
 
 #allIcons a {
   text-decoration: none;
