@@ -6,7 +6,7 @@ var index = lunr(function () {
 
 var iconList = {};
 
-var iconNodes = document.querySelectorAll('.icons a');
+var iconNodes = document.querySelectorAll('#allIcons a');
 
 console.log(iconNodes);
 

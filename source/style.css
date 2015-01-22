@@ -20,22 +20,18 @@ body {
 }
 
 .clear {width: 100%;clear: both;float: none;display: block;}
+.right {float: right;}
+
 header, footer {
   padding: 2em 4em 0;
 }
 
-.right {float: right;}
 section {padding: 2em 3em 0}
 
 nav {float: right;}
 
 nav a {margin-left: 12px;margin-top:8px;display: inline-block;color: blue;text-decoration: none;line-height: 1.33em;color: #000;border-bottom: 1px solid #000;}
 
-footer {position: fixed;bottom: 2em;left: 0;right:0;color: #aaa;font-size: 0.88em;}
-footer a {text-decoration: none;color: #aaa;}
-footer a:hover {color: orange}
-footer a:hover em {border-bottom-color: rgba(255, 184, 0, 0.47)}
-footer a em {border-bottom: 2px solid #ddd;font-style: normal}
 
 p {max-width: 30em;}
 
@@ -46,17 +42,10 @@ h1 {font-size: 1.5em;line-height: 1.33em;float:left;}
 h1 span {font-weight: normal;font-size: 0.88em;color: #666;margin-left: 2em;}
 h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
 
+.icon {background: url('') no-repeat center center;background-size:100%;width: 6em;height: 6em;margin: 0 1em 0 0;display: inline-block;}
 
-.icon {padding: 2em 4em}
-.icon h1 {font-size: 4em;clear: both;float: none;}
+.iconContainer .icon {width: 20em;height: 20em;}
 
-.icons {
-}
-
-.icons img,
-#searchResults img {width: 6em;margin: 0 1em 0 0;fill: #000; }
-
-.icon img {float: left;}
 input {
   background: url('./search.svg') no-repeat 10px center;
   background-size: 1em;
@@ -69,4 +58,11 @@ input {
   font-family: inherit;
 }
 
-input:focus {outline: none};
+input:focus {outline: none}
+
+
+footer {position: fixed;bottom: 2em;left: 0;right:0;color: #aaa;font-size: 0.88em;}
+footer a {text-decoration: none;color: #aaa;}
+footer a:hover {color: orange}
+footer a:hover em {border-bottom-color: rgba(255, 184, 0, 0.47)}
+footer a em {border-bottom: 2px solid #ddd;font-style: normal}

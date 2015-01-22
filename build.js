@@ -29,13 +29,15 @@ function compile () {
   createHomepage(metadata);
 
   makeStaticPages('license');
-  
+
   console.log('Built site...');
 }
 
 function createIconPages (metadata) {
       
   fs.mkdirSync(distDir + '/icon');
+
+  var iconCSS = '';
 
   for (var fileName in metadata) {
 
@@ -48,17 +50,28 @@ function createIconPages (metadata) {
     var iconTemplate = fs.readFileSync(sourceDir + '/icon.html'),
         $icon = cheerio.load(iconTemplate);
 
-    $icon('.icon h1').text(title);
-    $icon('.icon a').attr('href', '/icon/'+slug+'/' + fileName);
-    $icon('.icon img').attr('src', '/icon/'+slug+'/' + fileName);
+    $icon('.iconContainer h1').text(title);
+    $icon('.iconContainer a').attr('href', '/icon/'+slug+'/' + fileName);
+    $icon('.icon').addClass('iconBG').addClass(slug);
     
     iconTemplate = $icon.html()
+
+    var svg = fs.readFileSync(iconDir + fileName, 'utf8');
+    var foo = svg.slice(svg.indexOf('<svg '));
+    var basesixtyfoursvg = new Buffer(foo).toString('base64');
+    var newline = ".icon." + slug + " {background-image: url('data:image/svg+xml;base64," + basesixtyfoursvg + "');}";
+
+    iconCSS += newline;
 
     fs.writeFileSync(distDir + '/icon/' + slug + '/index.html', iconTemplate);
 
     fs.writeFileSync(distDir + '/icon/' + slug + '/' + fileName, fs.readFileSync(iconDir + fileName));
 
   }
+
+  fs.writeFileSync(distDir + '/icons.css', iconCSS);
+
+
 }
 
 function makeStaticPages() {
@@ -88,7 +101,9 @@ function createHomepage(metadata) {
         title = iconData.title,
         slug = makeSlug(title, fileName);
 
-    $('.icons').append('<a href="/icon/'+ slug +'" data-index="' + (++index) + '" data-tags="' + tags + '" title="' + title + '"><img src="/icon/'+slug+'/' + fileName + '" /></a>');
+    var newLink = '<a href="/icon/' + slug +'" class="icon '+slug+'" data-index="' + (++index) + '" data-tags="' + tags + '" title="' + title + '"></a>'
+    
+    $('#allIcons').append(newLink);
   }
 
   homepage = $.html();
