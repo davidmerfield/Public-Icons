@@ -53,7 +53,7 @@ function extractIcons (metadata) {
     var iconData = metadata[fileName],
         svg = fs.readFileSync(iconDir + fileName, 'utf8');
     
-    icons.push({
+    var icon = {
       title: iconData.title,
       tags: iconData.tags,
       index: ++index,
@@ -61,7 +61,9 @@ function extractIcons (metadata) {
       svg: svg,
       fileName: fileName,
       svgString: manipSVG(svg)
-    });
+    };
+
+    icons.push(icon);
   }
 
   return icons
@@ -69,7 +71,7 @@ function extractIcons (metadata) {
 
 function manipSVG (svgString) {
 
-  var $ = cheerio.load(svgString);
+  var $ = cheerio.load(svgString, { xmlMode: true});
 
   $('svg')
     .removeAttr('width')
