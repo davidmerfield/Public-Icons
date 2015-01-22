@@ -31,6 +31,8 @@ for (var i in iconNodes) {
 var search = document.getElementById('search'),
     searchResults = document.getElementById('searchResults');
 
+search.focus();
+
 search.onkeyup = function() {
 
   var results = index.search(search.value);
