@@ -1,38 +1,38 @@
 {
   "check.svg": {
-    "tags": ["tick", "checkmark"],
-    "title": "Check"
+    "title": "Check",
+    "tags": ["tick", "checkmark", "punctuation"]
   },
   "plus.svg": {
-    "tags": ["add", "addition", "maths"],
-    "title": "Plus"
+    "title": "Plus",
+    "tags": ["add", "addition", "maths", "operators"]
   },
   "bang.svg": { 
-    "tags": ["exclamation", "point"],
-    "title": "Bang"
+    "title": "Bang",
+    "tags": ["exclamation", "point", "punctuation"]
   },  
   "right_arrow.svg": {
-    "tags": ["arrow"],
-    "title": "Right Arrow"
+    "title": "Right Arrow",
+    "tags": ["arrow", "right", "direction"]
   },
   "up_arrow.svg": {
-    "tags": ["arrow"],
-    "title": "Up Arrow"
+    "title": "Up Arrow",
+    "tags": ["arrow", "up", "direction"]
   },
   "down_arrow.svg": {
-    "tags": ["arrow"],
-    "title": "Down Arrow"
+    "title": "Down Arrow",
+    "tags": ["arrow", "down", "direction"]
   },
   "left_arrow.svg": {
-    "tags": ["arrow"],    
-    "title": "Left Arrow"
+    "title": "Left Arrow",
+    "tags": ["arrow", "left", "direction"] 
   },  
   "heart.svg": {
-    "tags": ["heart", "love"],
-    "title": "Heart"
+    "title": "Heart",
+    "tags": ["heart", "love", "❤", "<3", "like", "save"]
   },
   "search.svg": {
-    "tags": ["search"],
-    "title": "Search"
+    "title": "Search",
+    "tags": ["search", "find", "magnify", "magnifying "]
   }
 }

@@ -1,8 +1,7 @@
 var fs = require('fs'),
     CleanCSS = require('clean-css'),
     UglifyJS = require("uglify-js"),
-    cheerio = require('cheerio'),
-    rmdir = require('rimraf');
+    cheerio = require('cheerio');
 
 var sourceDir = __dirname + '/source/',
     iconDir = __dirname + '/icons/',
