@@ -19,3 +19,4 @@ https://www.google.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=si
 http://www.flaticon.com/
 http://fortawesome.github.io/Font-Awesome/icons/
 https://useiconic.com/open#icons
+https://icomoon.io/app/#/select
