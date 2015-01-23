@@ -27,10 +27,6 @@
     "title": "Folder",
     "tags": ["folder"]
   },
-  "cloud.svg": {
-    "title": "Cloud",
-    "tags": ["cloud"]
-  },
   "pin.svg": {
     "title": "Pin",
     "tags": ["pin"]
@@ -43,9 +39,25 @@
     "title": "Lock",
     "tags": ["lock", "private"]
   },
+  "gear.svg": {
+    "title": "Gear",
+    "tags": ["gear"]
+  },
   "home.svg": {
     "title": "Home",
     "tags": ["home", "house"]
+  },
+  "audio.svg": {
+    "title": "Audio",
+    "tags": ["audio"]
+  },
+  "denied.svg": {
+    "title": "Denied",
+    "tags": ["denied"]
+  },
+  "camera.svg": {
+    "title": "Camera",
+    "tags": ["camera"]
   },
   "heart.svg": {
     "title": "Heart",
@@ -75,6 +87,10 @@
     "title": "Bang",
     "tags": ["exclamation", "point", "punctuation"]
   },  
+  "cloud.svg": {
+    "title": "Cloud",
+    "tags": ["cloud"]
+  },
   "search.svg": {
     "title": "Search",
     "tags": ["search", "find", "magnify", "magnifying "]
