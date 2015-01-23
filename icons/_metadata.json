@@ -31,6 +31,10 @@
     "title": "Pin",
     "tags": ["pin"]
   },
+  "tree.svg": {
+    "title": "Tree",
+    "tags": ["tree"]
+  },
   "star.svg": {
     "title": "Star",
     "tags": ["star"]
@@ -46,6 +50,10 @@
   "home.svg": {
     "title": "Home",
     "tags": ["home", "house"]
+  },
+  "eye.svg": {
+    "title": "Eye",
+    "tags": ["eye"]
   },
   "audio.svg": {
     "title": "Audio",
