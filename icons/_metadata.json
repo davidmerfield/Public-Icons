@@ -7,10 +7,50 @@
     "title": "Plus",
     "tags": ["add", "addition", "maths", "operators"]
   },
-  "bang.svg": { 
-    "title": "Bang",
-    "tags": ["exclamation", "point", "punctuation"]
+  "resize.svg": {
+    "title": "Resize",
+    "tags": ["resize"] 
   },  
+  "file.svg": {
+    "title": "File",
+    "tags": ["file"]
+  },
+  "location.svg": {
+    "title": "Location",
+    "tags": ["location"]
+  },
+  "note.svg": {
+    "title": "Note",
+    "tags": ["music", "note"]
+  },
+  "folder.svg": {
+    "title": "Folder",
+    "tags": ["folder"]
+  },
+  "cloud.svg": {
+    "title": "Cloud",
+    "tags": ["cloud"]
+  },
+  "pin.svg": {
+    "title": "Pin",
+    "tags": ["pin"]
+  },
+  "star.svg": {
+    "title": "Star",
+    "tags": ["star"]
+  },
+  "lock.svg": {
+    "title": "Lock",
+    "tags": ["lock", "private"]
+  },
+  "home.svg": {
+    "title": "Home",
+    "tags": ["home", "house"]
+  },
+  "heart.svg": {
+    "title": "Heart",
+    "tags": ["heart", "love", "❤", "<3", "like", "save"]
+  },
   "right_arrow.svg": {
     "title": "Right Arrow",
     "tags": ["arrow", "right", "direction"]
@@ -26,34 +66,14 @@
   "left_arrow.svg": {
     "title": "Left Arrow",
     "tags": ["arrow", "left", "direction"] 
-  },  
-  "resize.svg": {
-    "title": "Resize",
-    "tags": ["resize"] 
-  },  
-  "note.svg": {
-    "title": "Note",
-    "tags": ["music", "note"]
-  },
-  "cloud.svg": {
-    "title": "Cloud",
-    "tags": ["cloud"]
-  },
-  "star.svg": {
-    "title": "Star",
-    "tags": ["star"]
-  },
-  "home.svg": {
-    "title": "Home",
-    "tags": ["home", "house"]
-  },
-  "heart.svg": {
-    "title": "Heart",
-    "tags": ["heart", "love", "❤", "<3", "like", "save"]
-  },
+  },    
   "reload.svg": {
     "title": "Reload",
     "tags": ["reload", "refresh"]
+  },  
+  "bang.svg": { 
+    "title": "Bang",
+    "tags": ["exclamation", "point", "punctuation"]
   },  
   "search.svg": {
     "title": "Search",
