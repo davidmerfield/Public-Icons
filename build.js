@@ -2,26 +2,34 @@ var fs = require('fs'),
     CleanCSS = require('clean-css'),
     UglifyJS = require("uglify-js"),
     Mustache = require('mustache'),
-    cheerio = require('cheerio');
+    cheerio = require('cheerio'),
+    chokidar = require('chokidar');
 
 var sourceDir = __dirname + '/source/',
     iconDir = __dirname + '/icons/',
     distDir = __dirname + '/public/';
 
-var chokidar = require('chokidar'), 
-    watcher = chokidar.watch(sourceDir, {ignored: /^\./, persistent: true});
-    watcher.add(iconDir);
-    watcher.on('change', function(path) {compile();});
+// If called from command line then
+// compile and watch the 
+// directory for changes
+if (require.main === module) {
 
-compile();
+  compile();
 
-function compile () {
+  watcher = chokidar.watch(sourceDir, {ignored: /^\./, persistent: true});
+  watcher.add(iconDir);
+  watcher.on('change', function(path) {compile();});
+} 
+
+function compile (callback) {
 
   empty(distDir);
 
   moveImages('favicon.png', 'search.svg');
   compressCSS('style.css');
-  compressJS('lib/lunr.js','lib/mustache.js', 'app.js');
+  concatJS('lib/lunr.js','app.js');
+
+  if (callback) compressJS();
 
   var metadata = JSON.parse(fs.readFileSync(iconDir + '_metadata.json', 'utf8')),
       icons = extractIcons(metadata);
@@ -39,6 +47,8 @@ function compile () {
   createHomepage(homepageTemplate, partials, icons);
 
   makeStaticPages('license');
+
+  if (callback) return callback();
 
   console.log('Built site...');
 }
@@ -172,7 +182,7 @@ function moveImages () {
   }
 }
 
-function compressJS () {
+function concatJS () {
 
   var js = '', fileName, uncompressedFile;
 
@@ -186,15 +196,14 @@ function compressJS () {
   }
 
   fs.writeFileSync(distDir + fileName, js);
+}
 
-  // this shit below will uglify the files
+function  compressJS () {
 
-  // var files =[];
+  var compressedFile = UglifyJS.minify(distDir + 'app.js').code;
 
-  // for (var i in arguments)
-  //   files.push(sourceDir + arguments[i]);
+  fs.writeFileSync(distDir + 'app.js', compressedFile);
 
-  // fs.writeFileSync(distDir + 'app.js', UglifyJS.minify(files).code);
 }
 
 function compressCSS () {
@@ -214,3 +223,5 @@ function compressCSS () {
 
   return
 }
+
+module.exports = compile;

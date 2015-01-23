@@ -19,18 +19,26 @@ var s3 = require('s3'),
       s3Params: {
         Bucket: config.bucket
       },
-    };
+    },
 
-var uploader = client.uploadDir(params);
+    compile = require('./build');
 
-uploader.on('error', function(err) {
-  console.error("Syncing error:", err.stack);
+compile(function(){
+  
+  console.log('Compilation complete. Starting upload to S3...');
+
+  var uploader = client.uploadDir(params);
+
+  uploader.on('error', function(err) {
+    console.error("Syncing error:", err.stack);
+  });
+
+  uploader.on('progress', function() {
+    // console.log("progress", uploader.progressAmount, uploader.progressTotal);
+  });
+
+  uploader.on('end', function() {
+    console.log("Upload complete!");
+  });
 });
 
-uploader.on('progress', function() {
-  // console.log("progress", uploader.progressAmount, uploader.progressTotal);
-});
-
-uploader.on('end', function() {
-  console.log("Upload complete!");
-});
