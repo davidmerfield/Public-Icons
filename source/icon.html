@@ -7,6 +7,12 @@
         <Br />
         <h1>{{title}}</h1>
         <a class="button primary" href="./{{fileName}}" download>Download this icon</a><br />
+        <label>SVG source:
+        <textarea>{{svgString}}</textarea>
+      </label><br />
+      <label>CSS:
+        <textarea>background: url(data:image/gif;base64,{{base64}}
+          no-repeat center center;</textarea></label>
     </section>
     {{> footer}}
   </body>
