@@ -19,7 +19,7 @@ for (var i in iconNodes) {
   var nodeInfo ={
     id: parseInt(node.getAttribute('data-index')),
     title: node.getAttribute('title'),
-    tags: node.getAttribute('data-tags')
+    tags: node.getAttribute('data-tags').split(', ')
   };
 
   console.log(nodeInfo);

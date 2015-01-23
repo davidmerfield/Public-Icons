@@ -67,7 +67,7 @@ function extractIcons (metadata) {
     
     var icon = {
       title: iconData.title,
-      tags: iconData.tags,
+      tags: iconData.tags.join(', '),
       index: ++index,
       slug: slug,
       svg: svg,
