@@ -57,16 +57,29 @@ h1 {font-size: 1.5em;line-height: 1.33em;float:left;}
 h1 span {font-weight: normal;font-size: 0.88em;color: #666;margin-left: 2em;}
 h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
 
-.icon {width: 4.5em;height: 4.5em;margin: 0.5em 1.5em;display: inline-block;}
+.icon {width: 3.33em;height: 3.33em;margin: 0.66em 1.333em;display: inline-block;}
 
 .iconContainer {display: block;margin-top:2em;width: 100%;text-align: center;}
 .iconContainer .icon {width: 20em;height: 20em;}
 .iconContainer h1 {font-size: 4em;float: none;width: 100%;margin-top: 0.5em}
 
-#allIcons a {
+.iconLink:hover {
+  background: #eee  
+}
+
+.iconLink:hover .label {
+  color: #000;
+}
+
+#allIcons,
+#searchResults {padding: 2em 2.66em}
+
+.iconLink {
   text-decoration: none;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   display: inline-block;
+  padding: 0.5em 0.5em 2em;
+  border-radius: 0.33em
 }
 
 .button {
@@ -83,7 +96,7 @@ padding: 0.75em 2em 0.7em;
 
 .button.primary {background: #f9951d;}
 
-.icon + .label {text-align: center;position: absolute;bottom: -2em;left:0;right: 0;font-size: 0.66em;text-transform: uppercase;color: #aaa;letter-spacing: 0.1em}
+.icon + .label {text-align: center;position: absolute;bottom: 1em;left:0;right: 0;font-size: 0.66em;text-transform: uppercase;color: #aaa;letter-spacing: 0.1em}
 
 footer:before {position: absolute;
 top: -4em;height: 4em;width: 100%;content: "";
