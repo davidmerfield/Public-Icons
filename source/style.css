@@ -60,8 +60,14 @@ h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
 .icon {width: 3.33em;margin: 0.66em 1.333em;display: inline-block;}
 
 .iconContainer {display: block;margin-top:2em;width: 100%;text-align: center;}
-.iconContainer .icon {width: 20em;height: 20em;}
+.iconContainer .icon {width: 512px;}
 .iconContainer h1 {font-size: 4em;float: none;width: 100%;margin-top: 0.5em}
+
+.icon.size-256 {width: 256px}
+.icon.size-128 {width: 128px}
+.icon.size-64 {width: 64px}
+.icon.size-32 {width: 32px}
+.icon.size-16 {width: 16px}
 
 .iconLink:hover {
   background: #eee  
@@ -69,6 +75,17 @@ h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
 
 .iconLink:hover .label {
   color: #000;
+}
+
+.altSizes .icon {  -webkit-box-sizing: content-box; 
+  -moz-box-sizing: content-box; 
+  box-sizing: content-box; 
+padding: 1em; margin: 1em;text-align: center;}
+
+.altSizes .icon em {
+  font-style: normal;
+  position: absolute;bottom: -1em;background:#fff;left:0;right: 0;font-size: 0.88em;color: #aaa;letter-spacing: 0.1em
+
 }
 
 #allIcons,
