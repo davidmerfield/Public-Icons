@@ -61,31 +61,37 @@ function extractIcons (metadata) {
   for (var fileName in metadata) {
 
     var iconData = metadata[fileName],
-        svg = fs.readFileSync(iconDir + fileName, 'utf8');
+        svg = fs.readFileSync(iconDir + fileName, 'utf8'),
+        slug = makeSlug(iconData.title, fileName),
+        svgString = manipSVG(svg, slug);
     
     var icon = {
       title: iconData.title,
       tags: iconData.tags,
       index: ++index,
-      slug: makeSlug(iconData.title, fileName),
+      slug: slug,
       svg: svg,
+      base64: new Buffer(svgString).toString('base64'),
       fileName: fileName,
-      svgString: manipSVG(svg)
+      svgString: svgString
     };
 
     icons.push(icon);
   }
 
-  return icons
+  return icons;
 }
 
-function manipSVG (svgString) {
+function manipSVG (svgString, slug) {
 
   var $ = cheerio.load(svgString, { xmlMode: true});
 
   $('svg')
+    .removeAttr('version')
     .removeAttr('width')
-    .removeAttr('height');  
+    .removeAttr('height')
+    .removeAttr('enable-background')
+    .attr('id', 'icon-' + slug)
 
   // this gets the outerhtml of the svg el
   return $.xml($('svg'));
