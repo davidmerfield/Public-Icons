@@ -57,6 +57,10 @@ h1 {font-size: 1.5em;line-height: 1.33em;float:left;}
 h1 span {font-weight: normal;font-size: 0.88em;color: #666;margin-left: 2em;}
 h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
 
+
+.iconContainer h1 {line-height: 1em}
+.iconContainer h1 .icon {margin: 0 0.33em 0 0;vertical-align: middle;}
+
 .icon {width: 3.33em;margin: 0.66em 1.333em;display: inline-block;}
 
 .iconContainer {display: block;margin-top:2em;width: 100%;text-align: center;}
