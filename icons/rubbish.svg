@@ -3,10 +3,10 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="120px" height="120px" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve">
-<polygon points="99.983,116.57 20.017,116.57 14.017,30.817 105.983,30.817 "/>
-<polygon points="111.598,24.291 8.403,24.291 10.403,8.756 109.598,8.756 "/>
-<polygon points="76.842,9.474 43.158,9.474 46.158,2 73.842,2 "/>
-<rect x="33.654" y="43.332" fill="#FFFFFF" width="7.233" height="61.364"/>
-<rect x="78.118" y="43.332" fill="#FFFFFF" width="7.233" height="61.364"/>
-<rect x="56.383" y="43.332" fill="#FFFFFF" width="7.234" height="61.364"/>
+<polygon points="99.983,116.57 20.017,116.57 15.017,30.817 105.983,30.817 "/>
+<polygon points="111.598,25.291 8.403,25.291 10.403,9.756 109.598,9.756 "/>
+<polygon points="76.842,10.474 43.158,10.474 46.158,3 73.842,3 "/>
+<rect x="33.654" y="26.667" fill="#FFFFFF" width="7.233" height="78.029"/>
+<rect x="78.118" y="26.667" fill="#FFFFFF" width="7.233" height="78.029"/>
+<rect x="56.383" y="28.333" fill="#FFFFFF" width="7.234" height="76.362"/>
 </svg>
