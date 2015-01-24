@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="120px" height="120px" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve">
+<g>
+	<rect x="20.623" y="6.5" fill="#FFFFFF" width="3" height="17.054"/>
+	<polygon points="30.123,0 14.123,0 14.123,30.054 30.123,30.054 30.123,0 	"/>
+</g>
+<g>
+	<rect x="96.378" y="96.445" fill="#FFFFFF" width="3" height="17.055"/>
+	<polygon points="105.878,89.945 89.878,89.945 89.878,120 105.878,120 105.878,89.945 	"/>
+</g>
+<g>
+	<rect x="104.167" y="96.445" fill="#FFFFFF" width="9.333" height="3"/>
+	<polygon points="120,89.945 97.667,89.945 97.667,105.945 120,105.945 120,89.945 	"/>
+</g>
+<g>
+	<rect x="6.5" y="20.554" fill="#FFFFFF" width="9.333" height="3"/>
+	<polygon points="22.333,14.054 0,14.054 0,30.054 22.333,30.054 22.333,14.054 	"/>
+</g>
+<g>
+	<path d="M89.878,30.054v59.892H30.123V30.054H89.878 M105.878,14.054H14.123v91.892h91.755V14.054L105.878,14.054z"/>
+</g>
+<line fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" x1="24.47" y1="95.53" x2="116.226" y2="3.639"/>
+</svg>
