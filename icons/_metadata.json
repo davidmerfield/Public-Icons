@@ -39,6 +39,10 @@
     "title": "Star",
     "tags": ["star"]
   },
+  "rubbish.svg": {
+    "title": "Rubbish",
+    "tags": ["trash", "can"]
+  },
   "lock.svg": {
     "title": "Lock",
     "tags": ["lock", "private"]
@@ -46,6 +50,10 @@
   "gear.svg": {
     "title": "Gear",
     "tags": ["gear"]
+  },
+  "message.svg": {
+    "title": "Message",
+    "tags": ["message"]
   },
   "home.svg": {
     "title": "Home",
