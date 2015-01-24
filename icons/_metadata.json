@@ -31,6 +31,10 @@
     "title": "Pin",
     "tags": ["pin"]
   },
+  "building.svg": {
+    "title": "Building",
+    "tags": ["building"]
+  },
   "tree.svg": {
     "title": "Tree",
     "tags": ["tree"]
