@@ -1,7 +1,7 @@
 {
   "check.svg": {
     "title": "Check",
-    "tags": ["tick", "checkmark", "punctuation"]
+    "tags": ["tick", "checkmark", "punctuation", "correct", "grade"]
   },
   "plus.svg": {
     "title": "Plus",
@@ -9,39 +9,39 @@
   },
   "resize.svg": {
     "title": "Resize",
-    "tags": ["resize"] 
+    "tags": ["dimension", "adjust", "size"] 
   },  
   "file.svg": {
     "title": "File",
-    "tags": ["file"]
+    "tags": ["document", ".txt", "text"]
   },
   "location.svg": {
     "title": "Location",
-    "tags": ["location"]
+    "tags": ["gps", "geo", "track"]
   },
   "phone.svg": {
     "title": "Phone",
-    "tags": ["phone"]
+    "tags": ["telephone", "landline"]
   },
   "note.svg": {
     "title": "Note",
-    "tags": ["music", "note"]
+    "tags": ["music", "crotchet", "quaver", "quarter note"]
   },
   "folder.svg": {
     "title": "Folder",
-    "tags": ["folder"]
+    "tags": ["container", "file"]
   },
   "pin.svg": {
     "title": "Pin",
-    "tags": ["pin"]
+    "tags": ["map", "location", "position"]
   },
   "building.svg": {
     "title": "Building",
-    "tags": ["building"]
+    "tags": ["bank", "temple", "columns"]
   },
   "envelope.svg": {
     "title": "Envelope",
-    "tags": ["letter"]
+    "tags": ["letter", "mail", "stamp", "send", "inbox", "message"]
   },
   "toggle.svg": {
     "title": "Toggle",
@@ -49,35 +49,35 @@
   },
   "tree.svg": {
     "title": "Tree",
-    "tags": ["tree"]
+    "tags": ["tree", "pine", "forest", "christmas"]
   },
   "star.svg": {
     "title": "Star",
-    "tags": ["star"]
+    "tags": ["star", "like", "save", "favourite"]
   },
   "rubbish.svg": {
     "title": "Rubbish",
-    "tags": ["trash", "can"]
+    "tags": ["trash", "can", "waste", "bin", "empty"]
   },
   "lock.svg": {
     "title": "Lock",
-    "tags": ["lock", "private"]
+    "tags": ["secure", "private", "safe"]
   },
   "gear.svg": {
     "title": "Gear",
-    "tags": ["gear"]
+    "tags": ["settings", "preferences"]
   },
   "message.svg": {
     "title": "Message",
-    "tags": ["message"]
+    "tags": ["message", "im", "text"]
   },
   "car.svg": {
     "title": "Car",
-    "tags": ["car"]
+    "tags": ["car", "taxi"]
   },
   "home.svg": {
     "title": "Home",
-    "tags": ["home", "house"]
+    "tags": ["house", "dashboard", "index"]
   },
   "bolt.svg": {
     "title": "Bolt",
@@ -85,23 +85,23 @@
   },
   "eye.svg": {
     "title": "Eye",
-    "tags": ["eye"]
+    "tags": ["pupil", "big brother", "surveillance"]
   },
   "calculator.svg": {
     "title": "Calculator",
-    "tags": ["calculator"]
+    "tags": ["pad", "compute"]
   },
   "audio.svg": {
     "title": "Audio",
-    "tags": ["audio"]
+    "tags": ["sound", "volume", "music"]
   },
   "denied.svg": {
     "title": "Denied",
-    "tags": ["denied"]
+    "tags": ["restricted", "private", "no entry"]
   },
   "crop.svg": {
     "title": "Crop",
-    "tags": ["crop"]
+    "tags": ["resize"]
   },
   "plane.svg": {
     "title": "Aeroplane",
@@ -109,11 +109,11 @@
   },
   "cup.svg": {
     "title": "Cup",
-    "tags": ["cup"]
+    "tags": ["cup", "coffee", "tea", "drink"]
   },
   "camera.svg": {
     "title": "Camera",
-    "tags": ["camera"]
+    "tags": ["photo", "picture", "film"]
   },
   "bag.svg": {
     "title": "Bag",
@@ -125,7 +125,7 @@
   },
   "cutlery.svg": {
     "title": "Cutlery",
-    "tags": ["cutlery"]
+    "tags": ["knife", "fork", "silverware"]
   },
   "right_arrow.svg": {
     "title": "Right Arrow",
@@ -153,7 +153,7 @@
   },  
   "cloud.svg": {
     "title": "Cloud",
-    "tags": ["cloud"]
+    "tags": ["weather", "butt", "rain"]
   },
   "search.svg": {
     "title": "Search",
