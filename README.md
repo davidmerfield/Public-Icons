@@ -10,7 +10,7 @@ This project, including the website, are released into the public domain.
 
 ### Building the site locally
 
-To set up the site locally run ```npm install``` then ```node build.js``` then serve the contents of ```/public```. 
+To set up the site locally run ```npm install``` then ```node build.js``` then serve the contents of ```/public``` using ```python -m SimpleHTTPServer```.
 
 ### Public domain sources
 
