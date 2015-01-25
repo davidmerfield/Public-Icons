@@ -2,6 +2,8 @@
 
 A collection of icons in the public domain. See all the icons at [the project's website](http://publicicons.org).
 
+[![](http://i.imgur.com/OWu3CJz.png)](http://publicicons.org)
+
 ### License
 
 This project, including the website, are released into the public domain.
