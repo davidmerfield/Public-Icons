@@ -63,8 +63,8 @@ h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
 
 .icon {width: 3.33em;margin: 0.66em 1.333em;display: inline-block;}
 
-.iconContainer {display: block;margin-top:2em;width: 100%;text-align: center;}
-.iconContainer .icon {width: 512px;margin-top: 3em}
+.iconContainer {display: block;margin-top:3em;width: 100%;text-align: center;}
+.iconContainer .icon {width: 512px;margin-top:3em}
 .iconContainer h1 {font-size: 4em;float: none;width: 100%;margin-top: 0.5em}
 
 .icon.size-256 {width: 256px}
@@ -73,25 +73,29 @@ h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
 .icon.size-32 {width: 32px}
 .icon.size-16 {width: 16px}
 
+
 .small {margin-bottom: 3em;color: #777;font-size: 0.88em;}
 .small a {color: #777}
 .iconLink:hover {
   background: #eee  
 }
 
+h3 {color: #777;font-weight: normal;}
 .iconLink:hover .label {
   color: #000;
 }
 
 .iconInfo {width: 400px;position: absolute;top: 1em;left: 4em;padding: 0;text-align: left;}
 
-.altSizes {width: 256px;position: absolute;top: 1em;right: 6em;text-align: center;padding: 0}
+.altSizes {width: 256px;position: absolute;top:5em;right: 9em;text-align: center;padding: 0}
 
 .altSizes .icon {  -webkit-box-sizing: content-box; 
   -moz-box-sizing: content-box; 
   box-sizing: content-box; 
 padding: 1em 0; margin: 0 auto;text-align: center;
 display: block;}
+
+.icon.black {background: #000;fill: #fff;padding: 1.33em}
 
 .altSizes .icon em {
   font-style: normal;
