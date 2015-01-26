@@ -59,13 +59,14 @@ h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
 
 
 .iconContainer h1 {line-height: 1em;margin-bottom: 1em}
-.iconContainer h1 .icon {margin: 0 0.33em 0 0;vertical-align: middle;}
+.iconContainer h1 .icon {margin: 0 0.33em 0 0;vertical-align: middle;width: 48px}
 
 .icon {width: 3.33em;margin: 0.66em 1.333em;display: inline-block;}
 
 .iconContainer {display: block;margin-top:3em;width: 100%;text-align: center;}
-.iconContainer .icon {width: 512px;margin-top:3em}
-.iconContainer h1 {font-size: 4em;float: none;width: 100%;margin-top: 0.5em}
+.iconContainer .icon {width: 512px;margin-top:3em;}
+.iconContainer .icon.big {margin-left: 0;margin-right: 2em}
+.iconContainer h1 {font-size: 3em;float: none;width: 100%;margin-top: 0em}
 
 .icon.size-256 {width: 256px}
 .icon.size-128 {width: 128px}
@@ -85,9 +86,9 @@ h3 {color: #777;font-weight: normal;}
   color: #000;
 }
 
-.iconInfo {width: 400px;position: absolute;top: 1em;left: 4em;padding: 0;text-align: left;}
+.iconInfo {width: 400px;display: block;float:left;padding: 0;text-align: left;}
 
-.altSizes {width: 256px;position: absolute;top:5em;right: 9em;text-align: center;padding: 0}
+.altSizes {width: 256px;margin:2em 3em 0 0;float:right;text-align: center;padding: 0}
 
 .altSizes .icon {  -webkit-box-sizing: content-box; 
   -moz-box-sizing: content-box; 
