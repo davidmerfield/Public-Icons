@@ -8,7 +8,7 @@
           <h1><span class="icon size-64">{{{svgString}}}</span>{{title}}</h1>
           <span id="downloadButtons">
 
-          <a class="button primary" href="./{{fileName}}" download>Download icon</a>
+          <a id="downloadSVG" class="button primary" href="./{{fileName}}" download>Download icon</a>
           <a id="downloadPNG" class="button">Download icon as PNG</a>
           </span>
           <br />
@@ -70,5 +70,19 @@
       </script>
     </section>
     {{> footer}}
+    <script>
+
+    var downloadPNG = document.getElementById('downloadPNG'),
+        downloadSVG = document.getElementById('downloadSVG');
+
+    downloadPNG.onclick = function registerDownload () {
+      if (ga) ga('send', 'event', 'Icons', 'download', '{{slug}}-png');
+    };
+
+    downloadSVG.onclick = function registerDownload () {
+      if (ga) ga('send', 'event', 'Icons', 'download', '{{slug}}-svg');
+    };
+
+    </script>
   </body>
 </html>
