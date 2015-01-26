@@ -31,27 +31,30 @@ for (var i in iconNodes) {
 var search = document.getElementById('search'),
     searchResults = document.getElementById('searchResults');
 
-search.focus();
+if (search) {
+  search.focus();
 
-search.onkeyup = function() {
+  search.onkeyup = function() {
 
-  var results = index.search(search.value);
+    var results = index.search(search.value);
 
-  searchResults.innerHTML ='';
+    searchResults.innerHTML ='';
 
-  if (results.length) {
-    searchResults.style.display ='block';
-    allIcons.style.display = 'none';
-  } else {
-    searchResults.style.display ='none';
-    allIcons.style.display = 'block';
-  }
+    if (results.length) {
+      searchResults.style.display ='block';
+      allIcons.style.display = 'none';
+    } else {
+      searchResults.style.display ='none';
+      allIcons.style.display = 'block';
+    }
 
-  for (var i in results) {
+    for (var i in results) {
 
-    var id = results[i].ref;
-    
-    searchResults.appendChild(iconList[id].cloneNode(true));
-  }
+      var id = results[i].ref;
+      
+      searchResults.appendChild(iconList[id].cloneNode(true));
+    }
 
+  }  
 }
+

@@ -7,7 +7,7 @@
         <Br />
         <h1><span class="icon size-64">{{{svgString}}}</span>{{title}}</h1>
         <a class="button primary" href="./{{fileName}}" download>Download this icon</a><br />
-        
+
         <label>SVG source:
         <textarea>{{svgString}}</textarea>
       </label><br />
@@ -23,7 +23,34 @@
         <span class="icon size-32">{{{svgString}}} <em>32px</em></span>
         <span class="icon size-16">{{{svgString}}} <em>16px</em></span>
       </section>
-      
+      <img id="imageCan" />
+      <canvas style="background: none" width="512" height="512"></canvas>
+      <script>
+
+
+
+      var canvas = document.querySelector("canvas"),
+          context = canvas.getContext("2d");
+
+      var image = new Image;
+      image.src = "./{{fileName}}";
+
+      image.onload = function() {
+
+        context.drawImage(image, 0, 0, 512, 512);
+
+        var a = document.createElement("a");
+        a.download = "{{title}}.png";
+        a.text = 'Download PNG';
+        a.href = canvas.toDataURL("image/png");
+
+        document.body.appendChild(a)
+
+      };
+
+
+        
+      </script>
     </section>
     {{> footer}}
   </body>
