@@ -51,6 +51,10 @@
     "title": "Tree",
     "tags": ["tree", "pine", "forest", "christmas"]
   },
+  "cursor.svg": {
+    "title": "Cursor",
+    "tags": ["pointer", "mouse"]
+  },
   "star.svg": {
     "title": "Star",
     "tags": ["star", "like", "save", "favourite"]
