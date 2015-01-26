@@ -8,6 +8,33 @@ A collection of icons in the public domain. See all the icons at [the project's 
 
 This project, including the website, are released into the public domain.
 
+### Icon specification
+
+#### Aesthetic 
+
+1. Design the icons to be paired with a heavy sans-serif typeface.
+2. The icons should be blocked
+3. Avoid outlines and thin lines 
+4. Ensure the new icon matches the existing icons. Imagine the icon set as if it were a typeface.
+5. Icons should be readable at 16x16
+6. Make its shapes as simple as neccessary
+7. Try and ensure the icons have an even weight
+8. Prefer hard corners to soft
+9. Prioritize icon comprehension over beauty
+
+#### Content
+
+1. No logos
+2. No national flags
+3. No copyright infringement
+
+#### Technical
+
+1. Outline all strokes before submitting
+2. Ensure all icons are properly transparent. Fill:white is not transparent
+3. By convention make icon artboards 120x120
+4. Center icons inside artboard
+
 ### Building the site locally
 
 To set up the site locally run ```npm install``` then ```node build.js``` then serve the contents of ```/public``` using ```python -m SimpleHTTPServer```.

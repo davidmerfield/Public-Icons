@@ -77,6 +77,8 @@ h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
 
 .small {margin-bottom: 3em;color: #777;font-size: 0.88em;}
 .small a {color: #777}
+
+.small .icon {fill: #888;width: 16px;margin: 0;vertical-align: middle;}
 .iconLink:hover {
   background: #eee  
 }
