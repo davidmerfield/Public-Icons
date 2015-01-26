@@ -58,13 +58,13 @@ h1 span {font-weight: normal;font-size: 0.88em;color: #666;margin-left: 2em;}
 h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
 
 
-.iconContainer h1 {line-height: 1em}
+.iconContainer h1 {line-height: 1em;margin-bottom: 1em}
 .iconContainer h1 .icon {margin: 0 0.33em 0 0;vertical-align: middle;}
 
 .icon {width: 3.33em;margin: 0.66em 1.333em;display: inline-block;}
 
 .iconContainer {display: block;margin-top:2em;width: 100%;text-align: center;}
-.iconContainer .icon {width: 512px;}
+.iconContainer .icon {width: 512px;margin-top: 3em}
 .iconContainer h1 {font-size: 4em;float: none;width: 100%;margin-top: 0.5em}
 
 .icon.size-256 {width: 256px}
@@ -73,6 +73,8 @@ h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
 .icon.size-32 {width: 32px}
 .icon.size-16 {width: 16px}
 
+.small {margin-bottom: 3em;color: #777;font-size: 0.88em;}
+.small a {color: #777}
 .iconLink:hover {
   background: #eee  
 }
@@ -81,20 +83,27 @@ h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
   color: #000;
 }
 
+.iconInfo {width: 400px;position: absolute;top: 1em;left: 4em;padding: 0;text-align: left;}
+
+.altSizes {width: 256px;position: absolute;top: 1em;right: 6em;text-align: center;padding: 0}
+
 .altSizes .icon {  -webkit-box-sizing: content-box; 
   -moz-box-sizing: content-box; 
   box-sizing: content-box; 
-padding: 1em; margin: 1em;text-align: center;}
+padding: 1em 0; margin: 0 auto;text-align: center;
+display: block;}
 
 .altSizes .icon em {
   font-style: normal;
-  position: absolute;bottom: -1em;background:#fff;left:0;right: 0;font-size: 0.88em;color: #aaa;letter-spacing: 0.1em
+  position: absolute;top: 50%;margin-top: -0.88em;background:#fff;left:-4.33em;width:3em;text-align: right;font-size: 0.88em;color: #aaa;letter-spacing: 0.1em
 
 }
 
+textarea{width: 100%;display: block;margin: 0.33em 0 0;height: 3em}
 #allIcons,
 #searchResults {padding: 2em 2.66em}
 
+#imageCan {display: none;}
 .iconLink {
   text-decoration: none;
   margin-bottom: 1em;
@@ -105,9 +114,9 @@ padding: 1em; margin: 1em;text-align: center;}
 
 .button {
 display: inline-block;
-margin: 3em 0;
 text-decoration: none;
 color: #000;
+margin-bottom: 0.66em;
 border-radius: 4em;
 border:2px solid #000;
 font-weight: bold;

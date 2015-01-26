@@ -4,52 +4,61 @@
     {{> header}}
     <section class="iconContainer">
       <span class="icon">{{{svgString}}}</span>
-        <Br />
-        <h1><span class="icon size-64">{{{svgString}}}</span>{{title}}</h1>
-        <a class="button primary" href="./{{fileName}}" download>Download this icon</a><br />
+      <section class="iconInfo">
+          <Br />
+          <h1><span class="icon size-64">{{{svgString}}}</span>{{title}}</h1>
+          <span id="downloadButtons">
 
-        <label>SVG source:
-        <textarea>{{svgString}}</textarea>
-      </label><br />
-      <label>CSS:
-        <textarea>background: url(data:image/gif;base64,{{base64}}
-          no-repeat center center;</textarea></label>
+          <a class="button primary" href="./{{fileName}}" download>Download icon</a>
+          <a id="downloadPNG" class="button">Download icon as PNG</a>
+          </span>
+          <br />
+          <br />
+          <br />
 
-      <br />
-      <section class="altSizes">
-        <span class="icon size-256">{{{svgString}}} <em>256px</em></span>
-        <span class="icon size-128">{{{svgString}}} <em>128px</em></span>
-        <span class="icon size-64">{{{svgString}}} <em>64px</em></span>
-        <span class="icon size-32">{{{svgString}}} <em>32px</em></span>
-        <span class="icon size-16">{{{svgString}}} <em>16px</em></span>
+          <p class="small">This icon is free and in the public domain. This means you can use and modify it without attribution. For more information see the <a href="/license">license page</a>. Have an improvement or suggestion to this icon? <a href="http://github.com/davidmerfield/Public-Icons/">Contribute via GitHub.</a></p>
+
+          <label>SVG source:
+          <textarea>{{svgString}}</textarea>
+        </label><br />
+        <label>CSS:
+          <textarea>background: url(data:image/gif;base64,{{base64}}
+            no-repeat center center;</textarea></label>
+
+        <br />
+        <br />
+        <br />
+
+
       </section>
-      <img id="imageCan" />
-      <canvas style="background: none" width="512" height="512"></canvas>
+      <section class="altSizes">
+        <span class="icon size-16">{{{svgString}}} <em>16px</em></span>
+        <span class="icon size-32">{{{svgString}}} <em>32px</em></span>
+        <span class="icon size-64">{{{svgString}}} <em>64px</em></span>
+        <span class="icon size-128">{{{svgString}}} <em>128px</em></span>
+        <span class="icon size-256">{{{svgString}}} <em>256px</em></span>
+      </section>
+      <canvas id="imageCan" width="512" height="512"></canvas>
       <script>
-
-
 
       var canvas = document.querySelector("canvas"),
           context = canvas.getContext("2d");
 
       var image = new Image;
-      image.src = "./{{fileName}}";
+          image.src = "./{{fileName}}";
 
       image.onload = function() {
 
         context.drawImage(image, 0, 0, 512, 512);
 
-        var a = document.createElement("a");
-        a.download = "{{title}}.png";
-        a.text = 'Download PNG';
-        a.href = canvas.toDataURL("image/png");
-
-        document.body.appendChild(a)
+        var a = document.getElementById("downloadPNG");
+            a.download = "{{title}}.png";
+            a.href = canvas.toDataURL("image/png");
+            
+        downloadButtons.appendChild(a)
 
       };
 
-
-        
       </script>
     </section>
     {{> footer}}
