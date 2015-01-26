@@ -21,12 +21,8 @@ This project, including the website, are released into the public domain.
 7. Try and ensure the icons have an even weight
 8. Prefer hard corners to soft
 9. Prioritize icon comprehension over beauty
-
-#### Content
-
-1. No logos
-2. No national flags
-3. No copyright infringement
+10. Don't put text in the icon
+11. Don't incorporate anything not in the public domain into your icon
 
 #### Technical
 
