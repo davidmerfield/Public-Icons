@@ -99,16 +99,14 @@ function manipSVG (svgString, slug) {
 
 function createIconPages (template, partials, icons) {
       
-  fs.mkdirSync(distDir + '/icon');
-
   for (var i in icons) {
 
     var icon = icons[i],
         slug = icon.slug,
 
-        pagePath = distDir + '/icon/' + slug + '/';
+        pagePath = distDir + '/' + slug + '-icon/';
 
-    fs.mkdirSync(distDir + '/icon/' + slug);
+    fs.mkdirSync(pagePath);
 
     var renderedTemplate = Mustache.render(template, icon, partials);
 
