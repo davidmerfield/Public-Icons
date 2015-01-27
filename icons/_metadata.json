@@ -19,13 +19,13 @@
     "title": "Location",
     "tags": ["gps", "geo", "track"]
   },
-  "phone.svg": {
-    "title": "Phone",
-    "tags": ["telephone", "landline"]
-  },
   "note.svg": {
     "title": "Note",
     "tags": ["music", "crotchet", "quaver", "quarter note"]
+  },
+  "phone.svg": {
+    "title": "Phone",
+    "tags": ["telephone", "landline"]
   },
   "folder.svg": {
     "title": "Folder",

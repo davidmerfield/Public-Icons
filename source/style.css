@@ -36,6 +36,7 @@ nav {float: right;}
 nav a {margin-left: 24px;margin-top:8px;border-bottom: 2px solid rgba(0,0,0,0);display: inline-block;font-weight:bold;color: blue;text-decoration: none;line-height: 1.33em;color: #000;}
 nav a:hover {border-bottom: 2px solid #000;}
 
+nav a em {font-style: normal;font-weight: normal;display: block;}
 input {
   background: url('./search.svg') no-repeat 0.66em center;
   background-size: 1em;
@@ -49,24 +50,21 @@ input {
 }
 
 .icon-down-arrow {
-  background: url('data:image/svg+xml;base64,PHN2ZyBpZD0iaWNvbi1kb3duLWFycm93IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDggOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cmVjdCB4PSIyLjcwOSIgeT0iNC44NTUiIHRyYW5zZm9ybT0ibWF0cml4KDAuNzA3MSAtMC43MDcyIDAuNzA3MiAwLjcwNzEgLTIuMzg0MSA1LjQyMDIpIiB3aWR0aD0iNS4yODMiIGhlaWdodD0iMS40NjYiLz4NCjxyZWN0IHg9IjMuMTY0IiB5PSIwLjAyMSIgd2lkdGg9IjEuNjgzIiBoZWlnaHQ9IjYuMzc1Ii8+DQo8cmVjdCB4PSIwLjAxNSIgeT0iNC44NjEiIHRyYW5zZm9ybT0ibWF0cml4KC0wLjcwNzMgLTAuNzA2OSAwLjcwNjkgLTAuNzA3MyAwLjU4MTUgMTEuNDI4MykiIHdpZHRoPSI1LjI4NCIgaGVpZ2h0PSIxLjQ2NSIvPg0KPC9zdmc+') no-repeat center center;
-              background-size: 16px;
-              vertical-align: middle;
-              position: relative;
-              top: -1px;
-              margin-left: 0.12em;
-              width: 16px;height: 16px;display: inline-block;  
+  background: url('data:image/svg+xml;base64,PHN2ZyBpZD0iaWNvbi1kb3duLWFycm93IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDggOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cmVjdCB4PSIyLjcwOSIgeT0iNC44NTUiIHRyYW5zZm9ybT0ibWF0cml4KDAuNzA3MSAtMC43MDcyIDAuNzA3MiAwLjcwNzEgLTIuMzg0MSA1LjQyMDIpIiB3aWR0aD0iNS4yODMiIGhlaWdodD0iMS40NjYiLz4NCjxyZWN0IHg9IjMuMTY0IiB5PSIwLjAyMSIgd2lkdGg9IjEuNjgzIiBoZWlnaHQ9IjYuMzc1Ii8+DQo8cmVjdCB4PSIwLjAxNSIgeT0iNC44NjEiIHRyYW5zZm9ybT0ibWF0cml4KC0wLjcwNzMgLTAuNzA2OSAwLjcwNjkgLTAuNzA3MyAwLjU4MTUgMTEuNDI4MykiIHdpZHRoPSI1LjI4NCIgaGVpZ2h0PSIxLjQ2NSIvPg0KPC9zdmc+') no-repeat center center / 100%;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  margin-left: 0.12em;
+  width: 16px;height: 16px;display: inline-block;  
 }
 
 .icon-right-arrow {
-  background: url('data:image/svg+xml;base64,PHN2ZyBpZD0iaWNvbi1yaWdodC1hcnJvdyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHJlY3QgeD0iMi45NSIgeT0iMS45MjEiIHRyYW5zZm9ybT0ibWF0cml4KC0wLjcwNzEgLTAuNzA3MSAwLjcwNzEgLTAuNzA3MSA3LjY2ODkgOC40ODQyKSIgd2lkdGg9IjUuMjgzIiBoZWlnaHQ9IjEuNDY2Ii8+DQo8cmVjdCB4PSIwLjAyNCIgeT0iMy4xNTciIHdpZHRoPSI2LjM3NSIgaGVpZ2h0PSIxLjY4MyIvPg0KPHJlY3QgeD0iMi45NTYiIHk9IjQuNjE1IiB0cmFuc2Zvcm09Im1hdHJpeCgtMC43MDY5IDAuNzA3MyAtMC43MDczIC0wLjcwNjkgMTMuMzM2OSA1LjE2ODQpIiB3aWR0aD0iNS4yODQiIGhlaWdodD0iMS40NjUiLz4NCjwvc3ZnPg'  )
-              no-repeat center center;
-              background-size: 14px;
-              vertical-align: middle;
-              position: relative;
-              top: -1px;
-              margin-left: 0.12em;
-              width: 14px;height: 14px;display: inline-block;
+  background: url('data:image/svg+xml;base64,PHN2ZyBpZD0iaWNvbi1yaWdodC1hcnJvdyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHJlY3QgeD0iMi45NSIgeT0iMS45MjEiIHRyYW5zZm9ybT0ibWF0cml4KC0wLjcwNzEgLTAuNzA3MSAwLjcwNzEgLTAuNzA3MSA3LjY2ODkgOC40ODQyKSIgd2lkdGg9IjUuMjgzIiBoZWlnaHQ9IjEuNDY2Ii8+DQo8cmVjdCB4PSIwLjAyNCIgeT0iMy4xNTciIHdpZHRoPSI2LjM3NSIgaGVpZ2h0PSIxLjY4MyIvPg0KPHJlY3QgeD0iMi45NTYiIHk9IjQuNjE1IiB0cmFuc2Zvcm09Im1hdHJpeCgtMC43MDY5IDAuNzA3MyAtMC43MDczIC0wLjcwNjkgMTMuMzM2OSA1LjE2ODQpIiB3aWR0aD0iNS4yODQiIGhlaWdodD0iMS40NjUiLz4NCjwvc3ZnPg==') no-repeat center center / 100%;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  margin-left: 0.12em;
+  width: 14px;height: 14px;display: inline-block;
 }
 input:focus {outline: none}
 
@@ -81,7 +79,7 @@ h1 span {font-weight: normal;font-size: 0.88em;color: #777;margin-left: 2em;}
 h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
 
 .iconContainer {
-  border-top: 1px solid #000;padding: 2em 0;margin: 0 4em}
+  border-top: 2px solid #000;padding: 2em 0;margin: 0 4em}
 
 .iconContainer h1 {line-height: 1em;margin-bottom: 1em}
 .iconContainer h1 .icon {display:none;margin: 0 0.33em 0 0;vertical-align: middle;width: 58px}

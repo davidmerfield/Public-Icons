@@ -71,7 +71,7 @@ function extractIcons (metadata) {
       index: ++index,
       slug: slug,
       svg: svg,
-      base64: new Buffer(svg).toString('base64'),
+      base64: new Buffer(svgString).toString('base64'),
       fileName: fileName,
       svgString: svgString
     };
