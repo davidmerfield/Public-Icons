@@ -3,11 +3,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="120px" height="120px" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve">
-<rect x="11.3" y="6.5" width="96.578" height="110"/>
-<rect x="23.155" y="61.771" fill="#FFFFFF" width="16.344" height="16.345"/>
-<rect x="23.155" y="86.727" fill="#FFFFFF" width="16.344" height="16.343"/>
-<rect x="51.417" y="61.771" fill="#FFFFFF" width="16.344" height="16.345"/>
-<rect x="51.417" y="86.727" fill="#FFFFFF" width="16.344" height="16.343"/>
-<rect x="79.729" y="61.771" fill="#FFFFFF" width="16.346" height="41.299"/>
-<rect x="23.324" y="19.514" fill="#FFFFFF" width="73.352" height="26.187"/>
+<path d="M11.3,6.5v110h96.578V6.5H11.3z M39.499,103.07H23.155V86.727h16.344V103.07z M39.499,78.116H23.155V61.771h16.344V78.116z
+	 M67.762,103.07H51.417V86.727h16.345V103.07z M67.762,78.116H51.417V61.771h16.345V78.116z M96.075,103.07H79.729V61.771h16.347
+	V103.07z M96.676,45.701H23.324V19.514h73.352V45.701z"/>
 </svg>

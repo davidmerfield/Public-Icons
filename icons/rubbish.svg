@@ -3,10 +3,9 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="120px" height="120px" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve">
-<polygon points="99.983,116.57 20.017,116.57 15.017,30.817 105.983,30.817 "/>
 <polygon points="111.598,25.291 8.403,25.291 10.403,9.756 109.598,9.756 "/>
 <polygon points="76.842,10.474 43.158,10.474 46.158,3 73.842,3 "/>
-<rect x="33.654" y="26.667" fill="#FFFFFF" width="7.233" height="78.029"/>
-<rect x="78.118" y="26.667" fill="#FFFFFF" width="7.233" height="78.029"/>
-<rect x="56.383" y="28.333" fill="#FFFFFF" width="7.234" height="76.362"/>
+<polygon points="85.352,30.817 85.352,104.695 78.118,104.695 78.118,30.817 63.617,30.817 63.617,104.695 56.383,104.695 
+	56.383,30.817 40.887,30.817 40.887,104.695 33.654,104.695 33.654,30.817 15.017,30.817 20.017,116.57 99.982,116.57 
+	105.982,30.817 "/>
 </svg>

@@ -3,8 +3,11 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="120px" height="120px" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve">
-<rect y="28.789" width="120" height="80.014"/>
-<circle stroke="#FFFFFF" stroke-width="10" stroke-miterlimit="10" cx="70.953" cy="67.438" r="26.451"/>
-<polygon points="99.773,29.789 42.133,29.789 47.133,14.452 94.773,14.452 "/>
-<rect x="11.572" y="41.751" fill="#FFFFFF" width="16.508" height="8.819"/>
+<g>
+	<path d="M70.953,47.345c-11.828,0-21.451,9.623-21.451,21.451s9.623,21.451,21.451,21.451s21.451-9.623,21.451-21.451
+		S82.781,47.345,70.953,47.345z"/>
+	<path d="M99.447,28.789l-4.674-14.337H47.133l-4.674,14.337H0v80.014h120V28.789H99.447z M28.08,50.57H11.572v-8.819H28.08V50.57z
+		 M70.953,100.247c-17.342,0-31.451-14.109-31.451-31.451s14.109-31.451,31.451-31.451c17.342,0,31.451,14.109,31.451,31.451
+		S88.295,100.247,70.953,100.247z"/>
+</g>
 </svg>
