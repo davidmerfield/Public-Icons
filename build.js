@@ -25,7 +25,7 @@ function compile (callback) {
 
   empty(distDir);
 
-  moveImages('favicon.png', 'search.svg');
+  moveImages('favicon.png');
   compressCSS('style.css');
   concatJS('lib/lunr.js','app.js');
 
