@@ -12,7 +12,7 @@ This project, including the website, are released into the public domain.
 
 #### Aesthetic 
 
-1. Design the icons to be paired with a heavy sans-serif typeface.
+1. Design the icons to be paired with a heavy sans-serif typeface. Eventually I want to produce the icon set in other weights
 2. The icons should be blocked
 3. Avoid outlines and thin lines 
 4. Ensure the new icon matches the existing icons. Imagine the icon set as if it were a typeface.
