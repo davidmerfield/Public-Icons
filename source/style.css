@@ -50,12 +50,12 @@ input {
 
 .icon-down-arrow {
   background: url('data:image/svg+xml;base64,PHN2ZyBpZD0iaWNvbi1kb3duLWFycm93IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDggOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cmVjdCB4PSIyLjcwOSIgeT0iNC44NTUiIHRyYW5zZm9ybT0ibWF0cml4KDAuNzA3MSAtMC43MDcyIDAuNzA3MiAwLjcwNzEgLTIuMzg0MSA1LjQyMDIpIiB3aWR0aD0iNS4yODMiIGhlaWdodD0iMS40NjYiLz4NCjxyZWN0IHg9IjMuMTY0IiB5PSIwLjAyMSIgd2lkdGg9IjEuNjgzIiBoZWlnaHQ9IjYuMzc1Ii8+DQo8cmVjdCB4PSIwLjAxNSIgeT0iNC44NjEiIHRyYW5zZm9ybT0ibWF0cml4KC0wLjcwNzMgLTAuNzA2OSAwLjcwNjkgLTAuNzA3MyAwLjU4MTUgMTEuNDI4MykiIHdpZHRoPSI1LjI4NCIgaGVpZ2h0PSIxLjQ2NSIvPg0KPC9zdmc+') no-repeat center center;
-              background-size: 14px;
+              background-size: 16px;
               vertical-align: middle;
               position: relative;
               top: -1px;
               margin-left: 0.12em;
-              width: 14px;height: 14px;display: inline-block;  
+              width: 16px;height: 16px;display: inline-block;  
 }
 
 .icon-right-arrow {
@@ -109,7 +109,7 @@ h3 {font-size: 1em;line-height: 1.33em;margin-bottom: 1.33em}
   background: #eee  
 }
 
-h3 {color: #777;font-weight: normal;}
+h3 {color: #000;font-weight: normal;}
 .iconLink:hover .label {
   color: #000;
 }
@@ -124,7 +124,7 @@ h3 {color: #777;font-weight: normal;}
 padding: 1em 0; margin: 0 auto;text-align: center;
 display: block;}
 
-.icon.black {background: #000;fill: #fff;padding: 1.33em}
+.icon.black {background: #000;fill: #fff;padding: 1.5em;border-radius: 50%}
 
 .altSizes .icon em {
   font-style: normal;
@@ -158,10 +158,11 @@ font-size: 1.1566em;
 padding: 0.75em 1em 0.7em;
 }
 
+.button:hover {text-decoration: underline;}
 
 .button.primary {background: #f9951d;}
 
-.icon + .label {text-align: center;position: absolute;bottom: 1em;left:0;right: 0;font-size: 0.66em;text-transform: uppercase;color: #777;letter-spacing: 0.1em}
+.icon + .label {text-align: center;position: absolute;bottom: 1em;left:0;right: 0;font-size: 0.66em;text-transform: uppercase;color: #aaa;letter-spacing: 0.1em}
 
 footer:before {position: absolute;
 top: -4em;height: 4em;width: 100%;content: "";
