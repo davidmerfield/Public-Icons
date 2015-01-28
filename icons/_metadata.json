@@ -27,6 +27,10 @@
     "title": "Phone",
     "tags": ["telephone", "landline"]
   },
+  "rss.svg": {
+    "title": "RSS",
+    "tags": ["feed"]
+  },
   "folder.svg": {
     "title": "Folder",
     "tags": ["container", "file"]
