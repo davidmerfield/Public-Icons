@@ -28,8 +28,8 @@
     "tags": ["telephone", "landline"]
   },
   "rss.svg": {
-    "title": "RSS",
-    "tags": ["feed"]
+    "title": "Broadcast",
+    "tags": ["rss", "feed", "rss"]
   },
   "folder.svg": {
     "title": "Folder",
@@ -66,6 +66,10 @@
   "rubbish.svg": {
     "title": "Rubbish",
     "tags": ["trash", "can", "waste", "bin", "empty"]
+  },
+  "snowflake.svg": {
+    "title": "Snowflake",
+    "tags": ["snowflake"]
   },
   "lock.svg": {
     "title": "Lock",
