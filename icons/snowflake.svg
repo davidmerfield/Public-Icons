@@ -3,30 +3,30 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="120px" height="120px" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve">
-<polygon points="113.154,72.038 106.654,60.78 90.505,70.104 73.001,59.999 90.504,49.894 106.656,59.22 113.156,47.962 
-	103.504,42.389 115.096,35.697 108.596,24.438 97.004,31.13 97.004,19.987 84.004,19.987 84.004,38.636 66.5,48.742 66.5,28.53 
-	82.652,19.206 76.152,7.947 66.5,13.52 66.5,0.135 53.5,0.135 53.5,13.519 43.849,7.947 37.349,19.205 53.5,28.53 53.5,48.74 
-	35.997,38.634 35.997,19.985 22.997,19.985 22.997,31.129 11.406,24.437 4.906,35.694 16.497,42.387 6.845,47.959 13.345,59.218 
-	29.498,49.893 47.001,59.999 29.497,70.105 13.345,60.781 6.845,72.039 16.497,77.611 4.906,84.304 11.406,95.562 22.997,88.869 
-	22.997,100.015 35.997,100.015 35.997,81.364 53.5,71.258 53.5,91.47 37.349,100.795 43.849,112.053 53.5,106.48 53.5,119.865 
-	66.5,119.865 66.5,106.48 76.151,112.053 82.651,100.795 66.5,91.47 66.5,71.257 84.004,81.362 84.004,100.014 97.004,100.014 
-	97.004,88.867 108.596,95.56 115.096,84.302 103.504,77.609 "/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-83.609" y1="60" x2="-83.609" y2="119.865"/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-83.609" y1="95.223" x2="-64.208" y2="106.424"/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-83.609" y1="60" x2="-83.609" y2="0.135"/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-83.609" y1="24.777" x2="-103.01" y2="13.576"/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-83.609" y1="24.777" x2="-64.207" y2="13.576"/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-83.609" y1="95.223" x2="-103.011" y2="106.424"/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-83.609" y1="60" x2="-135.454" y2="89.933"/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-114.113" y1="77.611" x2="-114.113" y2="100.015"/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-83.609" y1="60" x2="-31.764" y2="30.067"/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-53.105" y1="42.389" x2="-53.105" y2="19.987"/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-53.105" y1="42.389" x2="-33.703" y2="53.591"/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-114.113" y1="77.611" x2="-133.514" y2="66.41"/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-83.609" y1="59.999" x2="-135.454" y2="30.065"/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-114.113" y1="42.388" x2="-133.514" y2="53.589"/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-83.609" y1="59.999" x2="-31.764" y2="89.931"/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-53.105" y1="77.61" x2="-33.705" y2="66.409"/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-53.105" y1="77.61" x2="-53.105" y2="100.014"/>
-<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-114.113" y1="42.388" x2="-114.113" y2="19.985"/>
+<polygon points="112.654,71.172 107.154,61.646 91.505,70.682 73.001,59.999 91.504,49.317 107.156,58.354 112.656,48.828 
+	102.504,42.966 115.096,35.697 108.596,24.438 96.004,31.708 96.004,19.987 85.004,19.987 85.004,38.059 66.5,48.742 66.5,27.375 
+	82.152,18.339 76.652,8.813 66.5,14.674 66.5,0.135 53.5,0.135 53.5,14.674 43.349,8.813 37.849,18.339 53.5,27.375 53.5,48.74 
+	34.997,38.057 34.997,19.985 23.997,19.985 23.997,31.706 11.406,24.437 4.906,35.694 17.498,42.964 7.345,48.826 12.845,58.352 
+	28.498,49.315 47.001,59.999 28.496,70.684 12.845,61.647 7.345,71.173 17.497,77.034 4.906,84.304 11.406,95.562 23.997,88.292 
+	23.997,100.015 34.997,100.015 34.997,81.941 53.5,71.258 53.5,92.625 37.849,101.661 43.349,111.187 53.5,105.325 53.5,119.865 
+	66.5,119.865 66.5,105.325 76.651,111.187 82.151,101.661 66.5,92.625 66.5,71.257 85.004,81.939 85.004,100.014 96.004,100.014 
+	96.004,88.29 108.596,95.56 115.096,84.302 102.504,77.032 "/>
+<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-90.257" y1="60" x2="-90.257" y2="119.865"/>
+<line fill="none" stroke="#000000" stroke-width="11" stroke-miterlimit="10" x1="-90.257" y1="95.223" x2="-70.856" y2="106.424"/>
+<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-90.257" y1="60" x2="-90.257" y2="0.135"/>
+<line fill="none" stroke="#000000" stroke-width="11" stroke-miterlimit="10" x1="-90.257" y1="24.777" x2="-109.658" y2="13.576"/>
+<line fill="none" stroke="#000000" stroke-width="11" stroke-miterlimit="10" x1="-90.257" y1="24.777" x2="-70.855" y2="13.576"/>
+<line fill="none" stroke="#000000" stroke-width="11" stroke-miterlimit="10" x1="-90.257" y1="95.223" x2="-109.659" y2="106.424"/>
+<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-90.257" y1="60" x2="-142.102" y2="89.933"/>
+<line fill="none" stroke="#000000" stroke-width="11" stroke-miterlimit="10" x1="-120.761" y1="77.611" x2="-120.761" y2="100.015"/>
+<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-90.257" y1="60" x2="-38.412" y2="30.067"/>
+<line fill="none" stroke="#000000" stroke-width="11" stroke-miterlimit="10" x1="-59.753" y1="42.389" x2="-59.753" y2="19.987"/>
+<line fill="none" stroke="#000000" stroke-width="11" stroke-miterlimit="10" x1="-59.753" y1="42.389" x2="-40.351" y2="53.591"/>
+<line fill="none" stroke="#000000" stroke-width="11" stroke-miterlimit="10" x1="-120.761" y1="77.611" x2="-140.162" y2="66.41"/>
+<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-90.257" y1="59.999" x2="-142.102" y2="30.065"/>
+<line fill="none" stroke="#000000" stroke-width="11" stroke-miterlimit="10" x1="-120.761" y1="42.388" x2="-140.162" y2="53.589"/>
+<line fill="none" stroke="#000000" stroke-width="13" stroke-miterlimit="10" x1="-90.257" y1="59.999" x2="-38.412" y2="89.931"/>
+<line fill="none" stroke="#000000" stroke-width="11" stroke-miterlimit="10" x1="-59.753" y1="77.61" x2="-40.353" y2="66.409"/>
+<line fill="none" stroke="#000000" stroke-width="11" stroke-miterlimit="10" x1="-59.753" y1="77.61" x2="-59.753" y2="100.014"/>
+<line fill="none" stroke="#000000" stroke-width="11" stroke-miterlimit="10" x1="-120.761" y1="42.388" x2="-120.761" y2="19.985"/>
 </svg>
