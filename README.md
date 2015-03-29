@@ -47,3 +47,4 @@ https://useiconic.com/open#icons
 http://pictos.cc/classic/one/
 https://icomoon.io/app/#/select
 https://dribbble.com/shots/879287-Beer-Icons?list=searches&tag=noun_project&offset=18
+http://glyphicons.com/
