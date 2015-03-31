@@ -35,10 +35,45 @@ This project, including the website, are released into the public domain.
 
 To set up the site locally run ```npm install``` then ```node build.js``` then serve the contents of ```/public``` using ```python -m SimpleHTTPServer```.
 
+### To do
+
+1. triangle
+2. circle
+3. pentagon
+4. square
+5. hexagon
+6. pen
+7. chart
+8. time / clock
+9. exit
+10. entrance
+12. upload
+13. download
+14. sun
+15. moon
+16. rain
+18. chevrons
+19. user silhouette
+20. player controls
+21. paper clip
+22. power off
+23. warning
+24. book
+25. crosshair
+26. flag
+27. hand
+28. battery
+29. fire
+30. leaf
+31. hammer
+32. spade
+33. coat hanger
+
 ### Public domain sources
 
 https://www.google.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=site%3Athenounproject.com%20%22This%20icon%20is%20licensed%20as%20Public%20Domain%22
 http://www.aiga.org/symbol-signs/
+
 ### NOT Public domain
 
 http://www.flaticon.com/
