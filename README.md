@@ -37,20 +37,9 @@ To set up the site locally run ```npm install``` then ```node build.js``` then s
 
 ### To do
 
-1. triangle
-2. circle
-3. pentagon
-4. square
-5. hexagon
 6. pen
 7. chart
 8. time / clock
-9. exit
-10. entrance
-12. upload
-13. download
-14. sun
-15. moon
 16. rain
 18. chevrons
 19. user silhouette

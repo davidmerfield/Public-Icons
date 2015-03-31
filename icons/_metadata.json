@@ -131,6 +131,10 @@
     "title": "Heart",
     "tags": ["heart", "love", "❤", "<3", "like", "save"]
   },
+  "power.svg": {
+    "title": "Power",
+    "tags": ["on", "off"]
+  },
   "cutlery.svg": {
     "title": "Cutlery",
     "tags": ["knife", "fork", "silverware"]
@@ -151,6 +155,22 @@
     "title": "Left Arrow",
     "tags": ["arrow", "left", "direction"] 
   },    
+  "exit.svg": {
+    "title": "Exit",
+    "tags": ["leave", "emergency"]
+  },  
+  "entrance.svg": {
+    "title": "Entrance",
+    "tags": ["enter", "emergency"]
+  },  
+  "upload.svg": {
+    "title": "Upload",
+    "tags": ["enter", "emergency"]
+  },  
+  "download.svg": {
+    "title": "Download",
+    "tags": ["enter", "emergency"]
+  },  
   "reload.svg": {
     "title": "Reload",
     "tags": ["reload", "refresh"]
@@ -175,9 +195,17 @@
     "title": "Bang",
     "tags": ["exclamation", "point", "punctuation"]
   },  
+  "sun.svg": {
+    "title": "Sun",
+    "tags": ["weather", "shine", "brightness"]
+  },
   "cloud.svg": {
     "title": "Cloud",
     "tags": ["weather", "butt", "rain"]
+  },
+  "moon.svg": {
+    "title": "Moon",
+    "tags": ["weather", "shine", "brightness"]
   },
   "search.svg": {
     "title": "Search",
