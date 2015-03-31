@@ -59,10 +59,6 @@
     "title": "Cursor",
     "tags": ["pointer", "mouse"]
   },
-  "star.svg": {
-    "title": "Star",
-    "tags": ["star", "like", "save", "favourite"]
-  },
   "rubbish.svg": {
     "title": "Rubbish",
     "tags": ["trash", "can", "waste", "bin", "empty"]
@@ -158,6 +154,22 @@
   "reload.svg": {
     "title": "Reload",
     "tags": ["reload", "refresh"]
+  },  
+  "square.svg": { 
+    "title": "Square",
+    "tags": ["shape", "geometry"]
+  },  
+  "star.svg": {
+    "title": "Star",
+    "tags": ["star", "like", "save", "favourite"]
+  },  
+  "circle.svg": { 
+    "title": "Circle",
+    "tags": ["shape", "geometry"]
+  },  
+  "triangle.svg": { 
+    "title": "Triangle",
+    "tags": ["shape", "geometry"]
   },  
   "bang.svg": { 
     "title": "Bang",
