@@ -45,7 +45,6 @@ To set up the site locally run ```npm install``` then ```node build.js``` then s
 19. user silhouette
 20. player controls
 21. paper clip
-22. power off
 23. warning
 24. book
 25. crosshair
