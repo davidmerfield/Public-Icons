@@ -170,6 +170,18 @@
   "download.svg": {
     "title": "Download",
     "tags": ["enter", "emergency"]
+  }, 
+  "right_chevron.svg": {
+   "title": "Right Chevron",
+   "tags": ["chevron", "right", "direction"]
+  },
+  "left_chevron.svg": {
+   "title": "Left Chevron",
+   "tags": ["chevron", "left", "direction"]
+  },
+  "external.svg": {
+    "title": "External",
+    "tags": ["share", "link", "outside"]
   },  
   "reload.svg": {
     "title": "Reload",
@@ -195,6 +207,10 @@
     "title": "Bang",
     "tags": ["exclamation", "point", "punctuation"]
   },  
+  "leaf.svg": {
+    "title": "Leaf",
+    "tags": ["nature", "green", "tree"]
+  },
   "sun.svg": {
     "title": "Sun",
     "tags": ["weather", "shine", "brightness"]
@@ -206,6 +222,10 @@
   "moon.svg": {
     "title": "Moon",
     "tags": ["weather", "shine", "brightness"]
+  },
+  "book.svg": {
+    "title": "Book",
+    "tags": ["read", "book"]
   },
   "search.svg": {
     "title": "Search",

@@ -40,19 +40,15 @@ To set up the site locally run ```npm install``` then ```node build.js``` then s
 6. pen
 7. chart
 8. time / clock
-16. rain
-18. chevrons
 19. user silhouette
 20. player controls
 21. paper clip
 23. warning
-24. book
 25. crosshair
 26. flag
 27. hand
 28. battery
 29. fire
-30. leaf
 31. hammer
 32. spade
 33. coat hanger
