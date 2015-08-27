@@ -4,10 +4,10 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="120px" height="120px" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve">
 <polygon fill="#020202" points="120.088,16.696 60.256,16.697 60.257,0.095 120.092,0.091 "/>
-<rect x="55.908" y="24.563" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 170.9399 -2.6241)" fill="#020202" width="60.21" height="19.056"/>
-<polygon fill="#020202" points="119.974,0.107 119.996,59.938 103.408,59.95 103.392,0.104 "/>
+<rect x="55.91" y="24.562" transform="matrix(0.7071 -0.7071 0.7071 0.7071 1.0877 70.8061)" fill="#020202" width="60.209" height="19.056"/>
+<polygon fill="#020202" points="119.975,0.107 119.996,59.938 103.408,59.95 103.393,0.104 "/>
 <rect x="3" y="23.5" fill="#020202" width="17" height="87"/>
-<rect x="86.49" y="76.545" fill="#020202" width="17" height="36.942"/>
+<rect x="86.49" y="76.059" fill="#020202" width="17" height="36.941"/>
 <rect x="3" y="16.692" fill="#020202" width="40.655" height="17"/>
 <rect x="3" y="96" fill="#020202" width="100.49" height="17"/>
 </svg>
