@@ -234,5 +234,9 @@
   "play.svg": {
     "title": "Play",
     "tags": ["play", "go", "start"]
+  },
+  "pause.svg": {
+    "title": "Pause",
+    "tags": ["pause"]
   }
 }
