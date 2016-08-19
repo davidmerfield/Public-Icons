@@ -230,5 +230,9 @@
   "search.svg": {
     "title": "Search",
     "tags": ["search", "find", "magnify", "magnifying "]
+  },
+  "play.svg": {
+    "title": "Play",
+    "tags": ["play", "go", "start"]
   }
 }
