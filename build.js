@@ -1,82 +1,108 @@
-var fs = require('fs'),
-    CleanCSS = require('clean-css'),
-    UglifyJS = require("uglify-js"),
-    Mustache = require('mustache'),
-    cheerio = require('cheerio'),
-    chokidar = require('chokidar');
+var fs = require('fs');
+var clean = require('clean-css');
+var uglify = require("uglify-js");
+var cheerio = require('cheerio');
+var empty = require('rimraf').sync;
+var render = require('mustache').render;
+var dirname = require('path').dirname;
 
-var sourceDir = __dirname + '/source/',
-    iconDir = __dirname + '/icons/',
-    distDir = __dirname + '/public/';
+compile();
 
-// If called from command line then
-// compile and watch the
-// directory for changes
-if (require.main === module) {
+// watch icon directory for any changes
+// and rebuild when we spot one.
+fs.watch('source', compile);
+
+function compile () {
 
   // Make the output dir if it doesn't exist
   try {fs.mkdirSync('public');} catch (e) {}
 
-  compile();
+  // Ensure the output dir is empty
+  empty('public/*');
 
-  watcher = chokidar.watch(sourceDir, {ignored: /^\./, persistent: true});
-  watcher.add(iconDir);
-  watcher.on('change', function(path) {compile();});
-}
+  var icons = extract('icons.json');
+  var partials = {
+    header: read('header.html'),
+    head: read('head.html'),
+    footer: read('footer.html')
+  };
 
-function compile (callback) {
+  // Build the homepage & icon pages
+  homepage(icons, partials, 'index.html');
+  permalinks(icons, partials, 'icon.html');
 
-  empty(distDir);
+  copy('favicon.png');
+  copy('bull.jpg');
 
-  moveImages('favicon.png');
+  static(['about', 'license'], partials);
+
   compressCSS('style.css');
-  concatJS('lib/lunr.js','app.js');
-
-  if (callback) compressJS();
-
-  var metadata = JSON.parse(fs.readFileSync(iconDir + '_metadata.json', 'utf8')),
-      icons = extractIcons(metadata);
-
-  var iconTemplate = fs.readFileSync(sourceDir + '/icon.html', 'utf8'),
-      homepageTemplate = fs.readFileSync(sourceDir + '/index.html', 'utf8'),
-
-      partials = {
-        header: fs.readFileSync(sourceDir + 'header.html', 'utf8'),
-        head: fs.readFileSync(sourceDir + 'head.html', 'utf8'),
-        footer: fs.readFileSync(sourceDir + 'footer.html', 'utf8')
-      };
-
-  createIconPages(iconTemplate, partials, icons);
-  createHomepage(homepageTemplate, partials, icons);
-
-  makeStaticPages('license');
-
-  if (callback) return callback();
+  compressJS('lib/lunr.js','app.js');
 
   console.log('Built site...');
 }
 
-function extractIcons (metadata) {
+function output (name, contents) {
 
-  var icons = [],
-      index = 0;
+  if (name && name.indexOf('/') > -1) {
+    var parent = dirname(name);
+    try {fs.mkdirSync('public/' + parent);} catch (e) {}
+  }
 
-  for (var fileName in metadata) {
+  fs.writeFileSync('public/'+name, contents, 'utf8');
+}
 
-    var iconData = metadata[fileName],
-        svg = fs.readFileSync(iconDir + fileName, 'utf8'),
-        slug = makeSlug(iconData.title, fileName),
-        svgString = manipSVG(svg, slug);
+function read (name) {
+  return fs.readFileSync('source/'+ name, 'utf8');
+}
+
+function copy (from, to) {
+
+  // make parent folder exist
+  if (to && to.indexOf('/') > -1) {
+    var parent = dirname(to);
+    try {fs.mkdirSync('public/' + parent);} catch (e) {}
+  }
+
+  // make parent folder exist
+  fs.writeFileSync('public/'+ (to || from), fs.readFileSync('source/' + from));
+}
+
+function homepage (icons, partials, name) {
+  output(name, render(read(name), {icons: icons}, partials));
+}
+
+function static (pages, partials) {
+
+  for (var i in pages)
+    output(pages[i] + '/index.html', render(read(pages[i]+'.html'), {}, partials));
+
+}
+
+function extract (metadata) {
+
+  metadata = JSON.parse(read(metadata));
+
+  var icons = [];
+
+  for (var name in metadata) {
+
+    if (name.indexOf('.svg') === -1) continue;
+
+    var svg = read('icons/' + name);
+    var tags = metadata[name].join(', ');
+    var svgEl = el(svg, slug(name));
+    var base64 = new Buffer(svgEl).toString('base64');
 
     var icon = {
-      title: iconData.title,
-      tags: iconData.tags.join(', '),
-      index: ++index,
-      slug: slug,
       svg: svg,
-      base64: new Buffer(svgString).toString('base64'),
-      fileName: fileName,
-      svgString: svgString
+      tags: tags,
+      name: name,
+      slug: slug(name),
+      title: title(name),
+      index: icons.length,
+      svgEl: svgEl,
+      base64: base64
     };
 
     icons.push(icon);
@@ -85,150 +111,74 @@ function extractIcons (metadata) {
   return icons;
 }
 
-function manipSVG (svgString, slug) {
+function title (str) {
+  str = str.slice(0, str.lastIndexOf('.svg'));
+  str = str[0].toUpperCase() + str.slice(1);
+  str = str.split('_').join(' ');
+  return str;
+}
 
-  var $ = cheerio.load(svgString, { xmlMode: true});
+function slug (str) {
+  return str.slice(0, str.lastIndexOf('.svg')).trim().toLowerCase().split('_').join('-');
+}
+
+function el (svg, slug) {
+
+  var $ = cheerio.load(svg, {xmlMode: true});
 
   $('svg')
     .removeAttr('version')
     .removeAttr('width')
     .removeAttr('height')
     .removeAttr('enable-background')
-    .attr('id', 'icon-' + slug)
+    .attr('id', 'icon-' + slug);
 
   // this gets the outerhtml of the svg el
   return $.xml($('svg'));
 }
 
-function createIconPages (template, partials, icons) {
+function permalinks (icons, partials, name) {
+
+  var template = read(name);
 
   for (var i in icons) {
 
-    var icon = icons[i],
-        slug = icon.slug,
+    var icon = icons[i];
+    var slug = icon.slug;
+    var pagePath = slug + '-icon/';
 
-        pagePath = distDir + '/' + slug + '-icon/';
+    fs.mkdirSync('public/' + pagePath);
 
-    fs.mkdirSync(pagePath);
+    var path = pagePath + 'index.html';
 
-    var renderedTemplate = Mustache.render(template, icon, partials);
-
-    fs.writeFileSync(pagePath + 'index.html', renderedTemplate);
-    fs.writeFileSync(pagePath + icon.fileName, icon.svg);
+    output(path, render(template, icon, partials));
+    output(pagePath + icon.name, icon.svg);
   }
 }
 
-function createHomepage (template, partials, icons) {
+function compressJS () {
 
-  var html = Mustache.render(
-        template,
-        {icons: icons},
-        partials
-      );
+  var js = '';
 
-  fs.writeFileSync(distDir + '/index.html', html);
-}
+  // concatenate passed files
+  for (var i in arguments)
+    js += read(arguments[i]);
 
-function makeStaticPages() {
+  // write concatenated file
+  output('app.js', js);
 
-  for (var i in arguments) {
-
-    fileName = arguments[i];
-
-    fs.mkdirSync(distDir + fileName);
-
-    fs.writeFileSync(distDir + fileName + '/index.html', fs.readFileSync(sourceDir + fileName + '.html'));
-  }
-
-}
-
-function empty (dirPath, removeSelf) {
-
-  if (removeSelf === undefined)
-    removeSelf = false;
-
-  try {
-    var files = fs.readdirSync(dirPath);
-  } catch(e) {
-    return;
-  }
-
-  if (files.length > 0) {
-    for (var i = 0; i < files.length; i++) {
-      var filePath = dirPath + '/' + files[i];
-      if (fs.statSync(filePath).isFile())
-        fs.unlinkSync(filePath);
-      else
-        empty(filePath, true);
-    }
-  }
-
-  if (removeSelf)
-    fs.rmdirSync(dirPath);
-};
-
-function makeSlug (string, fileName) {
-  string = string.replace('/',' ').replace(/[\.,\/#\'!$%\^&\*;:{}=_`~()]/g,"").trim().replace(/ +/g,'-').toLowerCase();
-
-  try {
-    string = encodeURIComponent(string).split('%').join('-');
-  } catch (err) {
-    string = makeFromFile(fileName);
-  }
-  // ensure slug is less than 1k chars long
-  return string.slice(0, 1000);
-}
-
-function moveImages () {
-
-  for (var i in arguments) {
-
-    fileName = arguments[i];
-
-    fs.writeFileSync(distDir + fileName, fs.readFileSync(sourceDir + fileName));
-  }
-}
-
-function concatJS () {
-
-  var js = '', fileName, uncompressedFile;
-
-  for (var i in arguments) {
-
-    fileName = arguments[i];
-
-    uncompressedFile = fs.readFileSync(sourceDir + fileName, 'utf8');
-
-    js += uncompressedFile;
-  }
-
-  fs.writeFileSync(distDir + fileName, js);
-}
-
-function  compressJS () {
-
-  var compressedFile = UglifyJS.minify(distDir + 'app.js').code;
-
-  fs.writeFileSync(distDir + 'app.js', compressedFile);
-
+  // then minify it since we can't pass a string to uglify
+  output('app.js', uglify.minify('public/app.js').code);
 }
 
 function compressCSS () {
 
-  var css = '', fileName, uncompressedCSS;
+  var css = '';
 
-  for (var i in arguments) {
+  for (var i in arguments)
+    css += new clean().minify(read(arguments[i]));
 
-    fileName = arguments[i];
-
-    uncompressedCSS = fs.readFileSync(sourceDir + fileName, 'utf8');
-
-    css += new CleanCSS().minify(uncompressedCSS);
-  }
-
-  fs.writeFileSync(distDir + fileName, css);
-
-  return
+  output('style.css', css);
 }
 
 module.exports = compile;
