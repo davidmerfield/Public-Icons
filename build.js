@@ -10,16 +10,17 @@ var sourceDir = __dirname + '/source/',
     distDir = __dirname + '/public/';
 
 // If called from command line then
-// compile and watch the 
+// compile and watch the
 // directory for changes
 if (require.main === module) {
+
 
   compile();
 
   watcher = chokidar.watch(sourceDir, {ignored: /^\./, persistent: true});
   watcher.add(iconDir);
   watcher.on('change', function(path) {compile();});
-} 
+}
 
 function compile (callback) {
 
@@ -30,6 +31,8 @@ function compile (callback) {
   concatJS('lib/lunr.js','app.js');
 
   if (callback) compressJS();
+
+
 
   var metadata = JSON.parse(fs.readFileSync(iconDir + '_metadata.json', 'utf8')),
       icons = extractIcons(metadata);
@@ -64,7 +67,7 @@ function extractIcons (metadata) {
         svg = fs.readFileSync(iconDir + fileName, 'utf8'),
         slug = makeSlug(iconData.title, fileName),
         svgString = manipSVG(svg, slug);
-    
+
     var icon = {
       title: iconData.title,
       tags: iconData.tags.join(', '),
@@ -98,7 +101,7 @@ function manipSVG (svgString, slug) {
 }
 
 function createIconPages (template, partials, icons) {
-      
+
   for (var i in icons) {
 
     var icon = icons[i],
@@ -134,7 +137,7 @@ function makeStaticPages() {
 
     fs.mkdirSync(distDir + fileName);
 
-    fs.writeFileSync(distDir + fileName + '/index.html', fs.readFileSync(sourceDir + fileName + '.html'));    
+    fs.writeFileSync(distDir + fileName + '/index.html', fs.readFileSync(sourceDir + fileName + '.html'));
   }
 
 }
@@ -147,9 +150,9 @@ function empty (dirPath, removeSelf) {
   try {
     var files = fs.readdirSync(dirPath);
   } catch(e) {
-    return; 
+    return;
   }
-  
+
   if (files.length > 0) {
     for (var i = 0; i < files.length; i++) {
       var filePath = dirPath + '/' + files[i];
@@ -157,16 +160,16 @@ function empty (dirPath, removeSelf) {
         fs.unlinkSync(filePath);
       else
         empty(filePath, true);
-    }    
+    }
   }
-  
+
   if (removeSelf)
     fs.rmdirSync(dirPath);
 };
 
 function makeSlug (string, fileName) {
   string = string.replace('/',' ').replace(/[\.,\/#\'!$%\^&\*;:{}=_`~()]/g,"").trim().replace(/ +/g,'-').toLowerCase();
-  
+
   try {
     string = encodeURIComponent(string).split('%').join('-');
   } catch (err) {
@@ -182,7 +185,7 @@ function moveImages () {
 
     fileName = arguments[i];
 
-    fs.writeFileSync(distDir + fileName, fs.readFileSync(sourceDir + fileName));    
+    fs.writeFileSync(distDir + fileName, fs.readFileSync(sourceDir + fileName));
   }
 }
 
