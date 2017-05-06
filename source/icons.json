@@ -1,0 +1,293 @@
+{
+  "check.svg": [
+    "tick",
+    "checkmark",
+    "punctuation",
+    "correct",
+    "grade"
+  ],
+  "plus.svg": [
+    "add",
+    "addition",
+    "maths",
+    "operators"
+  ],
+  "resize.svg": [
+    "dimension",
+    "adjust",
+    "size"
+  ],
+  "file.svg": [
+    "document",
+    ".txt",
+    "text"
+  ],
+  "location.svg": [
+    "gps",
+    "geo",
+    "track"
+  ],
+  "note.svg": [
+    "music",
+    "crotchet",
+    "quaver",
+    "quarter note"
+  ],
+  "phone.svg": [
+    "telephone",
+    "landline"
+  ],
+  "rss.svg": [
+    "rss",
+    "feed",
+    "rss"
+  ],
+  "folder.svg": [
+    "container",
+    "file"
+  ],
+  "pin.svg": [
+    "map",
+    "location",
+    "position"
+  ],
+  "building.svg": [
+    "bank",
+    "temple",
+    "columns"
+  ],
+  "envelope.svg": [
+    "letter",
+    "mail",
+    "stamp",
+    "send",
+    "inbox",
+    "message"
+  ],
+  "toggle.svg": [
+    "adjust"
+  ],
+  "tree.svg": [
+    "tree",
+    "pine",
+    "forest",
+    "christmas"
+  ],
+  "cursor.svg": [
+    "pointer",
+    "mouse"
+  ],
+  "rubbish.svg": [
+    "trash",
+    "can",
+    "waste",
+    "bin",
+    "empty"
+  ],
+  "snowflake.svg": [
+    "snowflake"
+  ],
+  "lock.svg": [
+    "secure",
+    "private",
+    "safe"
+  ],
+  "gear.svg": [
+    "settings",
+    "preferences"
+  ],
+  "message.svg": [
+    "message",
+    "im",
+    "text"
+  ],
+  "car.svg": [
+    "car",
+    "taxi"
+  ],
+  "home.svg": [
+    "house",
+    "dashboard",
+    "index"
+  ],
+  "bolt.svg": [
+    "lightning"
+  ],
+  "eye.svg": [
+    "pupil",
+    "big brother",
+    "surveillance"
+  ],
+  "calculator.svg": [
+    "pad",
+    "compute"
+  ],
+  "audio.svg": [
+    "sound",
+    "volume",
+    "music"
+  ],
+  "denied.svg": [
+    "restricted",
+    "private",
+    "no entry"
+  ],
+  "crop.svg": [
+    "resize"
+  ],
+  "plane.svg": [
+    "plane"
+  ],
+  "cup.svg": [
+    "cup",
+    "coffee",
+    "tea",
+    "drink"
+  ],
+  "camera.svg": [
+    "photo",
+    "picture",
+    "film"
+  ],
+  "bag.svg": [
+    "case"
+  ],
+  "heart.svg": [
+    "heart",
+    "love",
+    "❤",
+    "<3",
+    "like",
+    "save"
+  ],
+  "power.svg": [
+    "on",
+    "off"
+  ],
+  "cutlery.svg": [
+    "knife",
+    "fork",
+    "silverware"
+  ],
+  "right_arrow.svg": [
+    "arrow",
+    "right",
+    "direction"
+  ],
+  "up_arrow.svg": [
+    "arrow",
+    "up",
+    "direction"
+  ],
+  "down_arrow.svg": [
+    "arrow",
+    "down",
+    "direction"
+  ],
+  "left_arrow.svg": [
+    "arrow",
+    "left",
+    "direction"
+  ],
+  "exit.svg": [
+    "leave",
+    "emergency"
+  ],
+  "entrance.svg": [
+    "enter",
+    "emergency"
+  ],
+  "upload.svg": [
+    "enter",
+    "emergency"
+  ],
+  "download.svg": [
+    "enter",
+    "emergency"
+  ],
+  "right_chevron.svg": [
+    "chevron",
+    "right",
+    "direction"
+  ],
+  "left_chevron.svg": [
+    "chevron",
+    "left",
+    "direction"
+  ],
+  "external.svg": [
+    "share",
+    "link",
+    "outside"
+  ],
+  "reload.svg": [
+    "reload",
+    "refresh"
+  ],
+  "square.svg": [
+    "shape",
+    "geometry"
+  ],
+  "star.svg": [
+    "star",
+    "like",
+    "save",
+    "favourite"
+  ],
+  "circle.svg": [
+    "shape",
+    "geometry"
+  ],
+  "triangle.svg": [
+    "shape",
+    "geometry"
+  ],
+  "bang.svg": [
+    "exclamation",
+    "point",
+    "punctuation"
+  ],
+  "leaf.svg": [
+    "nature",
+    "green",
+    "tree"
+  ],
+  "sun.svg": [
+    "weather",
+    "shine",
+    "brightness"
+  ],
+  "cloud.svg": [
+    "weather",
+    "butt",
+    "rain"
+  ],
+  "moon.svg": [
+    "weather",
+    "shine",
+    "brightness"
+  ],
+  "book.svg": [
+    "read",
+    "book"
+  ],
+  "search.svg": [
+    "search",
+    "find",
+    "magnify",
+    "magnifying "
+  ],
+  "play.svg": [
+    "play",
+    "go",
+    "start"
+  ],
+  "pause.svg": [
+    "pause"
+  ],
+  "clock.svg": [
+    "clock",
+    "time",
+    "watch"
+  ]
+}
