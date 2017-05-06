@@ -230,5 +230,9 @@
   "search.svg": {
     "title": "Search",
     "tags": ["search", "find", "magnify", "magnifying "]
+  },
+    "clock.svg": {
+    "title": "clock",
+    "tags": ["clock", "time", "watch"]
   }
 }
