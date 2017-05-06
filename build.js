@@ -14,6 +14,8 @@ var sourceDir = __dirname + '/source/',
 // directory for changes
 if (require.main === module) {
 
+  // Make the output dir if it doesn't exist
+  try {fs.mkdirSync('public');} catch (e) {}
 
   compile();
 
