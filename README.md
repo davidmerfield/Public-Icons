@@ -39,7 +39,6 @@ To set up the site locally run ```npm install``` then ```node build.js``` then s
 
 6. pen
 7. chart
-8. time / clock
 19. user silhouette
 20. player controls
 21. paper clip

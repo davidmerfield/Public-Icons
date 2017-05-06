@@ -238,5 +238,9 @@
   "pause.svg": {
     "title": "Pause",
     "tags": ["pause"]
+  },
+  "clock.svg": {
+    "title": "clock",
+    "tags": ["clock", "time", "watch"]
   }
 }
