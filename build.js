@@ -34,8 +34,6 @@ function compile (callback) {
 
   if (callback) compressJS();
 
-
-
   var metadata = JSON.parse(fs.readFileSync(iconDir + '_metadata.json', 'utf8')),
       icons = extractIcons(metadata);
 
