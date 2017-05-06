@@ -1,22 +1,38 @@
 <!DOCTYPE html>
   {{> head}}
   <body>
+
     {{> header}}
+
+
+    <!--
     <section style="float:right;width:406px;padding:1em;margin: 1.66em 3em 0 1em;background: rgb(254, 254, 196);position:relative;z-index:1">
       <h2 style="margin-bottom:0.66em">Why does this exist?</h2>
-      <p>I could not find a set of icons in the public domain that was suitable for software. The goal of this project is to design a cohesive set of icons that pairs well with a bold sans-serif typeface that anyone can use and adapt. <!-- <a href="/about">More about this project</a>< --></p>
+      <p>I could not find a set of icons in the public domain that was suitable for software. The goal of this project is to design a cohesive set of icons that pairs well with a bold sans-serif typeface that anyone can use and adapt. <a href="/about">More about this project</a>< </p>
 
-    </section>
-    <section id="searchContainer">
+    </section> -->
+
+<!--     <section id="searchContainer">
       <input id="search" name="search" type="text" placeholder="Search all icons" />
     </section>
     <section id="searchResults" style="display: none">
 
+    </section> -->
+
+    <section id="iconNav" class="column">
+      <a href=""><span class="icon"><svg id="icon-circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" xml:space="preserve">
+<circle cx="60" cy="60.834" r="54.167"></circle>
+</svg></span>All icons</a>
+      <a href="">Interface</a>
+      <a href="">Shapes</a>
+      <a href="">Nature</a>
+      <a href="">Objects</a>
+      <a href="">Ideas</a>
     </section>
-    <section id="allIcons">
+    <section id="allIcons" class="column three">
       {{#icons}}
         <a class="iconLink" href="/{{slug}}-icon" data-index="{{index}}" data-tags="{{tags}}" title="{{title}}">
-          <span class="icon">{{{svgString}}}</span>
+          <span class="icon">{{{svgEl}}}</span>
           <span class="label">{{title}}</span>
         </a>
       {{/icons}}
