@@ -5,16 +5,16 @@
     <section class="iconContainer">
       <section class="iconInfo">
           <Br />
-          <h1><span class="icon size-64">{{{svgString}}}</span>{{title}}</h1>
+          <h1><span class="icon size-64">{{{svgEl}}}</span>{{title}}</h1>
           <span id="downloadButtons">
-            <a id="downloadSVG" class="button primary" href="./{{fileName}}" download>Download icon <span class="icon-down-arrow"></span></a>
+            <a id="downloadSVG" class="button primary" href="./{{name}}" download>Download icon <span class="icon-down-arrow"></span></a>
             <a id="downloadPNG" class="button">Download icon as PNG <span class="icon-down-arrow"></span></a>
           </span>
 
           <p class="small">This icon is in the public domain. For more information see the <a href="/license">license page</a>. Have an improvement or suggestion to this icon? Open a <a href="http://github.com/davidmerfield/Public-Icons/">pull request on GitHub.</a></p>
 
           <label>SVG source:
-          <textarea>{{svgString}}</textarea>
+          <textarea>{{svgEl}}</textarea>
         </label><br />
         <label>CSS:
           <textarea>background: url('data:image/svg+xml;base64,{{base64}}') no-repeat center center / 100%;</textarea></label>
@@ -25,21 +25,21 @@
 
       </section>
 
-      <span class="icon big">{{{svgString}}}</span>
+      <span class="icon big">{{{svgEl}}}</span>
 
       <section class="altSizes">
         <h3>How this icon looks on black:</h3>
-         <span class="icon size-64 black">{{{svgString}}} <em>64px</em></span>
-               <br /><br />  
+         <span class="icon size-64 black">{{{svgEl}}} <em>64px</em></span>
+               <br /><br />
         <h3>How this icon looks scaled down:</h3>
-        <span class="icon size-128">{{{svgString}}} <em>128px</em></span>
-        <span class="icon size-64">{{{svgString}}} <em>64px</em></span>
-        <span class="icon size-32">{{{svgString}}} <em>32px</em></span>
-        <span class="icon size-16">{{{svgString}}} <em>16px</em></span>
-<!--         <span class="icon size-256">{{{svgString}}} <em>256px</em></span>
+        <span class="icon size-128">{{{svgEl}}} <em>128px</em></span>
+        <span class="icon size-64">{{{svgEl}}} <em>64px</em></span>
+        <span class="icon size-32">{{{svgEl}}} <em>32px</em></span>
+        <span class="icon size-16">{{{svgEl}}} <em>16px</em></span>
+<!--         <span class="icon size-256">{{{svgEl}}} <em>256px</em></span>
 
 
- -->  
+ -->
 
       </section>
       <canvas id="imageCan" width="512" height="512"></canvas>
@@ -58,7 +58,7 @@
         var a = document.getElementById("downloadPNG");
             a.download = "{{title}}.png";
             a.href = canvas.toDataURL("image/png");
-            
+
         downloadButtons.appendChild(a)
 
       };
