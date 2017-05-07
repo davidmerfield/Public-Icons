@@ -32,7 +32,7 @@ function compile () {
   permalinks(icons, partials, 'icon.html');
 
   copy('favicon.png');
-  copy('bull.jpg');
+  copy('bullshit.jpg');
 
   static(['about', 'license'], partials);
 
