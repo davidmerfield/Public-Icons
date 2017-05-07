@@ -26,23 +26,30 @@ blockquote {
   padding: 0;
   margin: 0;
   width: 25em;
-  font-family: 'Minion Pro', Georgia, serif;
   font-size:1.58em;
+  font-family: 'Minion Pro', serif;
   text-align: justify;
   text-indent: 1.5em;
 }
 
-blockquote.ref {font-style: italic;}
-blockquote.author {font-style: normal;font-variant: small-caps;}
-blockquote.date {
+blockquote.ref {    margin: 0 0em 0 1.5em;
+    text-indent: 0;
+    padding: 0 12em 0 0;
+    max-width: 18em;
+    text-align: left;
+  }
+
+blockquote .author {font-style: normal;letter-spacing:0.05em;font-variant: small-caps;text-transform: lowercase;}
+blockquote .date {
+  font-style: normal;
   font-variant-numeric: oldstyle-nums;
   -moz-font-feature-settings: "onum";
   -webkit-font-feature-settings: "onum";
   font-feature-settings: "onum";
 }
-#iconNav {font-weight: bold;font-size:1.33333em;line-height: 1.6666}
-#iconNav a {display: block;position: relative;text-decoration: none;color: black}
-#iconNav .icon {position: absolute;font-size:0.666em;left: -1.333em;top:0.5em;}
+#iconNav {font-weight: bold;font-size:1.33333em;line-height: 1.6666;}
+#iconNav a {display: block;position: relative;text-decoration: none;color: black;padding-left: 1em}
+#iconNav .icon {position: absolute;font-size:0.666em;left: 0;top:0.5em;}
 
 #iconNav a:nth-child(2) {color:#0161c8;}
 #iconNav a:nth-child(3) {color:#02b8e0;}
@@ -73,7 +80,6 @@ a.link {    color: rgba(0, 0, 0, 0.85);
 .clear {width: 100%;clear: both;float: none;display: block;}
 .right {float: right;}
 
-#searchContainer {padding-left: 3.33em;margin-left: -0.66em}
 nav {float: right;}
 
 nav a {margin-left: 24px;margin-top:8px;border-bottom: 2px solid rgba(0,0,0,0);display: inline-block;font-weight:bold;color: blue;text-decoration: none;line-height: 1.33em;color: #000;}
@@ -81,16 +87,28 @@ nav a:hover {border-bottom: 2px solid #000;}
 
 nav a em {font-style: normal;font-weight: normal;display: block;}
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: black;
+}
+
 input {
-  background: url('data:image/svg+xml;base64,PHN2ZyBpZD0iaWNvbi1zZWFyY2giIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgOCA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGlkPSJzZWFyY2giIGQ9Ik03Ljk5LDYuOTI4TDUuODQ3LDQuNzg0YzAuMjg5LTAuNDc2LDAuNDU4LTEuMDMzLDAuNDU4LTEuNjNDNi4zMDUsMS40MTIsNC44OTUsMCwzLjE1MiwwDQoJQzEuNDExLDAsMCwxLjQxMiwwLDMuMTU0YzAsMS43NDEsMS40MTIsMy4xNTEsMy4xNTMsMy4xNTFjMC41OTcsMCwxLjE1NC0wLjE2OSwxLjYzLTAuNDU4bDIuMTQ1LDIuMTQ2TDcuOTksNi45Mjh6IE0xLjIwMywzLjE1NA0KCWMwLjAwMi0xLjA3NywwLjg3NC0xLjk0OSwxLjk1MS0xLjk1MWMxLjA3NiwwLjAwMiwxLjk0OCwwLjg3NCwxLjk0OSwxLjk1MUM1LjEwMSw0LjIzLDQuMjI5LDUuMTAzLDMuMTUzLDUuMTAzDQoJQzIuMDc1LDUuMTAzLDEuMjA1LDQuMjMsMS4yMDMsMy4xNTR6Ii8+DQo8L3N2Zz4=') no-repeat 0.88em center / 0.9em;
-  padding: 0.5em 0.5em 0.5em 2.25em;
-  line-height: 1.33em;
-  width: 50%;
-  font-size: 2em;
-  border: 1px solid #aaa;
-  border-radius: 3em;
-  font-size: 1.25em;
-  font-family: inherit;
+  background: url('data:image/svg+xml;base64,PHN2ZyBpZD0iaWNvbi1zZWFyY2giIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgOCA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGlkPSJzZWFyY2giIGQ9Ik03Ljk5LDYuOTI4TDUuODQ3LDQuNzg0YzAuMjg5LTAuNDc2LDAuNDU4LTEuMDMzLDAuNDU4LTEuNjNDNi4zMDUsMS40MTIsNC44OTUsMCwzLjE1MiwwDQoJQzEuNDExLDAsMCwxLjQxMiwwLDMuMTU0YzAsMS43NDEsMS40MTIsMy4xNTEsMy4xNTMsMy4xNTFjMC41OTcsMCwxLjE1NC0wLjE2OSwxLjYzLTAuNDU4bDIuMTQ1LDIuMTQ2TDcuOTksNi45Mjh6IE0xLjIwMywzLjE1NA0KCWMwLjAwMi0xLjA3NywwLjg3NC0xLjk0OSwxLjk1MS0xLjk1MWMxLjA3NiwwLjAwMiwxLjk0OCwwLjg3NCwxLjk0OSwxLjk1MUM1LjEwMSw0LjIzLDQuMjI5LDUuMTAzLDMuMTUzLDUuMTAzDQoJQzIuMDc1LDUuMTAzLDEuMjA1LDQuMjMsMS4yMDMsMy4xNTR6Ii8+DQo8L3N2Zz4=') no-repeat 0.155em center / 0.9em;
+  padding: 0 0 0 1.5em;
+    width: 97%;
+    font-weight: bold;
+    font-size: 1.33333em;
+    border: none;
+    font-family: inherit;
+    margin: 0em 0 0;
 }
 
 .icon-down-arrow {
@@ -205,18 +223,6 @@ padding: 0.75em 1em 0.7em;
 
 .icon + .label {color: #000;}
 
-footer:before {position: absolute;
-top: -4em;height: 4em;width: 100%;content: "";
-background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
-display: none;}
-footer {position: fixed;bottom: 0;left: 2em;right:2em;padding: 0 0em 2em;color: #aaa;font-weight: 400;font-size:0.8em;width:20%;}
-footer a {text-decoration: none;color: #aaa;}
-footer a:hover {color: orange}
-footer a:hover em {border-bottom-color: rgba(255, 184, 0, 0.47)}
-footer a em {border-bottom: 2px solid #ddd;font-style: normal}
+
+footer {position: fixed;bottom: 0;left: 2em;right:2em;padding: 0 0em 2em;font-weight: 400;width:20%;}
+footer a {color: black;font-weight: bold;text-decoration: none;}
