@@ -74,7 +74,7 @@ a.link {    color: rgba(0, 0, 0, 0.85);
 .column {width:23%;margin-right: 2%;display: block;float: left;}
 .column:nth-child(4n) {width:23%;margin-right: 0}
 
-.column.two {width: 47%;margin-right: 2%}
+.column.two {width: 45%;margin-right: 4%}
 .column.three {width: 75%;margin-right: 0}
 
 .clear {width: 100%;clear: both;float: none;display: block;}
