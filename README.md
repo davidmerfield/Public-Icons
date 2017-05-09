@@ -37,6 +37,9 @@ To set up the site locally run ```npm install``` then ```node build.js``` then s
 
 ### To do
 
+use some css to make it easy to set numbers inside shapes like this:
+http://typographica.org/typeface-reviews/ceremony/
+
 6. pen
 7. chart
 19. user silhouette
