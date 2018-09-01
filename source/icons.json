@@ -288,5 +288,40 @@
     "clock",
     "time",
     "watch"
-  ]
+  ],
+  "battery.svg": [
+    "battery",
+    "energy",
+    "charge",
+    "charging"
+  ],
+  "flag.svg": [
+    "flag",
+    "banner",
+    "report",
+    "issue",
+    "golf",
+    "hole"
+  ],
+  "mic.svg": [
+    "mic",
+    "microphone",
+    "mike",
+    "record"
+  ],
+  "paper_clip.svg": [
+    "paper",
+    "clip",
+    "paperclip",
+    "office",
+    "official",
+    "clerk",
+    "paperwork"
+  ],
+  "user.svg": [
+    "user",
+    "human",
+    "man",
+    "account"
+  ],
 }
